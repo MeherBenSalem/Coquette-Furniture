@@ -12,6 +12,8 @@ Listing copy and artwork for CurseForge and Modrinth. Nothing here ships in the 
 
 Image links in the description point at `raw.githubusercontent.com/MeherBenSalem/Coquette-Furniture/main/marketing/images/...`, so they work once this folder is on `main`. The repository is private: either make it (or a copy of `marketing/images`) public, or upload the images to the CurseForge project gallery and replace each URL.
 
+Under the banner is the links line (Discord, source and issues), and the description ends with the shared **More from NightBeam Studio** footer used by every NightBeam mod; keep both in step with the other repositories. When a docs page exists at `nightbeam.dev/docs/coquette-furniture`, add `[Docs](...)` as the first link, like the other mods.
+
 The description leads with the pitch, then the furniture room by room (bedroom, living room, kitchen, bathroom, garden), decorations, Interior Designer Mode, the furniture sets, the six colourways and recolouring, recipes, configuration, everything else, downloads and compatibility, the FAQ and a gallery.
 
 ## Adding a Minecraft version

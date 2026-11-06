@@ -1,5 +1,7 @@
 ![Coquette Furniture 1.0: Sweet Home](https://raw.githubusercontent.com/MeherBenSalem/Coquette-Furniture/main/marketing/images/banner.png)
 
+**[Discord](https://discord.gg/TJc3CxR4jK) · [Source and issues](https://github.com/MeherBenSalem/Coquette-Furniture)**
+
 ## Dream bedrooms and pastel home decor.
 
 **Coquette Furniture** fills your builds with **37 pieces of furniture in six pastel colourways**, **4 potted plants** and **13 decorations**: 239 blocks in all. Each one is a detailed model with cabriole legs, gold knobs, satin bows, lace trims, tufted cushions and hearts.
@@ -260,3 +262,15 @@ Yes. Coquette Furniture runs on Forge and Fabric for 1.20.1, and on NeoForge and
 ---
 
 Coquette Furniture is made by Sugarplum Studios. All rights reserved. The Fredoka and Nunito fonts used in this artwork are licensed under the SIL Open Font License 1.1.
+
+---
+
+### More from NightBeam Studio
+
+- **[Remnants: Ashen Legacy](https://www.curseforge.com/minecraft/modpacks/remnants-ashen-legacy)**: the story-driven soulslike RPG modpack built on NightBeam's mods
+- **[Premium server plugins](https://nightbeam.dev/store)**: anti-cheat, ranked PvP, SMP setups and more on BuiltByBit
+- **[NightBeam Pro](https://nightbeam.dev/memberships)**: the model library and NightBeam Forge credits, from $5 a month
+- **[Discord](https://discord.gg/TJc3CxR4jK)**: support, bug reports, suggestions and early looks
+- **[Support NightBeam](https://nightbeam.dev/support)**: help keep every mod free
+
+**Follow:** [YouTube](https://www.youtube.com/@nightbeamstudio) · [Instagram](https://www.instagram.com/nightbeamstudio/) · [X](https://x.com/NightBeamLLC) · [Facebook](https://www.facebook.com/profile.php?id=61574823331471)
