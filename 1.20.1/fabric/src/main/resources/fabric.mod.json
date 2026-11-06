@@ -1,0 +1,30 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "license": "${license}",
+    "icon": "coquettefurniture_logo.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.sugarplumstudios.coquette.fabric.CoquetteFurnitureFabric"
+        ],
+        "client": [
+            "com.sugarplumstudios.coquette.fabric.CoquetteFurnitureFabricClient"
+        ]
+    },
+    "mixins": [
+        "${mod_id}.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.15.0",
+        "fabric-api": "*",
+        "minecraft": "${minecraft_version}",
+        "java": ">=${java_version}"
+    }
+}

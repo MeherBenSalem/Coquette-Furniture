@@ -8,7 +8,7 @@ import zlib
 from pathlib import Path
 
 MODID = "coquettefurniture"
-ROOT = Path(__file__).resolve().parents[2] / "src" / "main" / "resources"
+ROOT = Path(__file__).resolve().parents[2] / "1.20.1" / "common" / "src" / "main" / "resources"
 ASSETS = ROOT / "assets" / MODID
 DATA = ROOT / "data" / MODID
 MC_DATA = ROOT / "data" / "minecraft"

@@ -1,0 +1,46 @@
+plugins {
+    id 'multiloader-loader'
+    id 'net.neoforged.moddev.legacyforge'
+}
+
+legacyForge {
+    version = "${minecraft_version}-${forge_version}"
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
+    runs {
+        configureEach {
+            systemProperty 'forge.enabledGameTestNamespaces', mod_id
+        }
+        client {
+            client()
+            // ./gradlew :forge:runClient -Pshowcase builds a showcase world, screenshots it and quits
+            if (project.hasProperty('showcase')) systemProperty 'coquettefurniture.showcase', 'true'
+            if (project.hasProperty('clientArgs')) programArguments.addAll(project.property('clientArgs').toString().split(' '))
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+        // Runs the mod's GameTests headlessly, then exits (non-zero on failure).
+        gameTestServer {
+            type = "gameTestServer"
+        }
+    }
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    compileOnly project(":common")
+}
+
+jar {
+    // the showcase harness is a development tool only
+    exclude 'com/sugarplumstudios/coquette/dev/**'
+    finalizedBy('reobfJar')
+}

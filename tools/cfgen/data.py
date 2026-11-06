@@ -1,6 +1,7 @@
 """Turns the geometry into models, blockstates, item models, loot tables, recipes,
 tags and the language file."""
 import json
+from pathlib import Path
 
 from . import decor, furniture as F
 from .core import (ASSETS, DATA, M, MC_DATA, MODID, ROOT, centred_for_item, check_range, display_for, move,
@@ -694,5 +695,5 @@ def generate():
     write_tags(tags)
     write_json(ASSETS / "lang" / "en_us.json", dict(sorted(lang.items())))
     ids = [f"{c}_{t.id}" for t in TYPES for c in COLORS] + list(decor.PLANTS) + list(decor.DECOR)
-    (ROOT.parents[2] / "tools" / "generated_ids.txt").write_text("\n".join(ids) + "\n", encoding="utf-8")
+    (Path(__file__).resolve().parents[1] / "generated_ids.txt").write_text("\n".join(ids) + "\n", encoding="utf-8")
     return ids
