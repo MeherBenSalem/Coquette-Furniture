@@ -17,6 +17,8 @@ legacyForge {
             client()
             // ./gradlew :forge:runClient -Pshowcase builds a showcase world, screenshots it and quits
             if (project.hasProperty('showcase')) systemProperty 'coquettefurniture.showcase', 'true'
+            // ./gradlew :forge:runClient -Pmarketing captures the 1920x1080 listing screenshots (see marketing/README.md)
+            if (project.hasProperty('marketing')) systemProperty 'coquettefurniture.marketing', 'true'
             if (project.hasProperty('clientArgs')) programArguments.addAll(project.property('clientArgs').toString().split(' '))
         }
         server {

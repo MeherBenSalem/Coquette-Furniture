@@ -13,16 +13,18 @@ VERSION=$1; LOADER=$2; WHAT=${3:-both}
 WS="$ROOT/$VERSION"; RUN="$WS/$LOADER/run"
 LOGS=${DEVTEST_LOGS:-/tmp/coquette-devtest}; mkdir -p "$LOGS"
 TAG="$VERSION-$LOADER"
+case "$VERSION" in 1.20.1) N=0;; 1.21.1) N=1;; 26.2) N=2;; *) N=3;; esac
+RCON=$((25590 + N)); PORT=$((25570 + N)); DISP=":$((77 + N))"
 [ "$LOADER" = fabric ] && RUN="$WS/fabric/run"
 mkdir -p "$RUN"
 echo "eula=true" > "$RUN/eula.txt"
-printf '%s\n' online-mode=false enable-rcon=true rcon.port=25599 rcon.password=coquette \
+printf '%s\n' online-mode=false enable-rcon=true rcon.port=$RCON server-port=$PORT rcon.password=coquette \
   level-name=devtest spawn-monsters=false max-tick-time=-1 > "$RUN/server.properties"
 mkdir -p "$RUN/defaultconfigs" && printf '[server]\n\tadvertiseDedicatedServerToLan = false\n' > "$RUN/defaultconfigs/forge-server.toml"
 
-rcon() { python3 - "$1" <<'PY'
+rcon() { python3 - "$1" "$RCON" <<'PY'
 import socket, struct, sys
-s = socket.create_connection(("127.0.0.1", 25599), timeout=10)
+s = socket.create_connection(("127.0.0.1", int(sys.argv[2])), timeout=10)
 def pkt(i, t, body):
     b = struct.pack("<ii", i, t) + body.encode() + b"\0\0"
     s.sendall(struct.pack("<i", len(b)) + b)
@@ -57,8 +59,8 @@ if [ "$WHAT" != client ]; then
 fi
 
 if [ "$WHAT" != server ]; then
-  export DISPLAY=:77
-  pgrep -f "Xvfb :77" > /dev/null || (Xvfb :77 -screen 0 1920x1080x24 +extension GLX +render -noreset > "$LOGS/xvfb.log" 2>&1 &)
+  export DISPLAY=$DISP
+  pgrep -f "Xvfb $DISP " > /dev/null || (Xvfb $DISP -screen 0 1920x1080x24 +extension GLX +render -noreset > "$LOGS/xvfb$N.log" 2>&1 &)
   sleep 2
   export LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe
   rm -f "$RUN"/screenshots/coquette_*.png

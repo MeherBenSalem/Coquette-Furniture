@@ -2,6 +2,7 @@ package com.sugarplumstudios.coquette.forge;
 
 import com.sugarplumstudios.coquette.client.CoquetteClient;
 import com.sugarplumstudios.coquette.client.render.DisplayCabinetRenderer;
+import com.sugarplumstudios.coquette.dev.MarketingShots;
 import com.sugarplumstudios.coquette.registry.ModBlockEntities;
 import com.sugarplumstudios.coquette.registry.ModEntities;
 import net.minecraft.client.renderer.entity.NoopRenderer;
@@ -27,6 +28,9 @@ final class ForgeClient {
         MinecraftForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent event) -> {
             if (event.phase == TickEvent.Phase.END) {
                 CoquetteClient.tick();
+                if (MarketingShots.ENABLED) {
+                    MarketingShots.onTick();
+                }
             }
         });
     }
