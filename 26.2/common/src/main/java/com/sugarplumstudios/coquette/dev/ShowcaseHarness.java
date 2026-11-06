@@ -40,7 +40,6 @@ import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.levelgen.WorldOptions;
 import net.minecraft.world.level.levelgen.presets.WorldPresets;
-import org.lwjgl.glfw.GLFW;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -123,7 +122,6 @@ public final class ShowcaseHarness {
         }
         catalogStage++;
         if (catalogStage == 1) {
-            GLFW.glfwSetCursorPos(mc.getWindow().handle(), 2, 2);
             mc.gui.setScreen(new CatalogScreen());
         } else if (catalogStage == 10 && mc.gui.screen() instanceof CatalogScreen catalog) {
             catalog.previewSelect(1, ModItems.furniture(FurnitureType.VANITY_TABLE, FurnitureColor.BABY_PINK));

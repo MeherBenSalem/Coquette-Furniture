@@ -2,7 +2,6 @@ package com.sugarplumstudios.coquette.block;
 
 import com.sugarplumstudios.coquette.block.entity.StoveBlockEntity;
 import com.sugarplumstudios.coquette.registry.ModBlockEntities;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -31,13 +30,6 @@ public class StoveBlock extends AbstractFurnaceBlock {
     private static final Map<Direction, VoxelShape> SHAPES = ShapeUtil.horizontal(ShapeUtil.px(
             0.5, 0, 1, 15.5, 15.75, 15.5,
             0.5, 15, 13.5, 15.5, 20.5, 15.5));
-
-    private static final MapCodec<StoveBlock> CODEC = simpleCodec(StoveBlock::new);
-
-    @Override
-    protected MapCodec<StoveBlock> codec() {
-        return CODEC;
-    }
 
     public StoveBlock(Properties properties) {
         super(properties);

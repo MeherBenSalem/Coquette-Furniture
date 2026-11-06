@@ -6,6 +6,7 @@ import com.sugarplumstudios.coquette.block.Recolor;
 import com.sugarplumstudios.coquette.config.CoquetteConfig;
 import com.sugarplumstudios.coquette.registry.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.Prediction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -64,7 +65,7 @@ public final class CommonEvents {
             player.addTag(RECEIVED_CATALOG);
             ItemStack catalog = new ItemStack(ModItems.INTERIOR_DESIGN_CATALOG.get());
             if (!player.getInventory().add(catalog)) {
-                player.drop(catalog, false);
+                player.drop(catalog, false, Prediction.SERVER_ONLY);
             }
         }
     }

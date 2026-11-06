@@ -63,6 +63,13 @@ if [ "$WHAT" != server ]; then
   pgrep -f "Xvfb $DISP " > /dev/null || (Xvfb $DISP -screen 0 1920x1080x24 +extension GLX +render -noreset > "$LOGS/xvfb$N.log" 2>&1 &)
   sleep 2
   export LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe
+  # 26.3+ opens its window with SDL3, which wants an sRGB framebuffer Xvfb/llvmpipe can't give: wrap libGL (see the .c)
+  LIBGL=$(ldconfig -p | awk '/libGL\.so\.1 /{print $NF; exit}')
+  if [ -n "$LIBGL" ] && cc -shared -fPIC -O2 -o "$LOGS/libglx_nosrgb.so" "$ROOT/tools/glx_nosrgb.c" -ldl -Wl,--no-as-needed "$LIBGL" 2>/dev/null; then
+    # SDL_OPENGL_LIBRARY covers NeoForge's early window; vanilla hands SDL the library LWJGL loaded (org.lwjgl.opengl.libname)
+    export SDL_OPENGL_LIBRARY="$LOGS/libglx_nosrgb.so"
+    export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:-} -Dorg.lwjgl.opengl.libname=$LOGS/libglx_nosrgb.so"
+  fi
   rm -f "$RUN"/screenshots/coquette_*.png
   [ -f "$RUN/options.txt" ] || printf '%s\n' onboardAccessibility:false skipMultiplayerWarning:true tutorialStep:none \
     pauseOnLostFocus:false guiScale:2 renderDistance:8 soundCategory_master:0.0 > "$RUN/options.txt"

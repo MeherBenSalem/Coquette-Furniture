@@ -9,7 +9,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState;
 import net.minecraft.resources.Identifier;
-import org.lwjgl.glfw.GLFW;
 
 import java.util.function.BiConsumer;
 
@@ -40,7 +39,7 @@ public final class CoquetteClient {
 
     /** Creates the catalog key in the category the loader registered. */
     public static KeyMapping createKeyMapping(KeyMapping.Category category) {
-        OPEN_CATALOG = new KeyMapping("key.coquettefurniture.catalog", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_K, category);
+        OPEN_CATALOG = new KeyMapping("key.coquettefurniture.catalog", InputConstants.KEY_K, category);
         return OPEN_CATALOG;
     }
 

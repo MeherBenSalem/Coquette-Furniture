@@ -2,7 +2,6 @@ package com.sugarplumstudios.coquette.block;
 
 import com.sugarplumstudios.coquette.config.CoquetteConfig;
 import net.minecraft.ChatFormatting;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.LevelReader;
@@ -65,13 +64,6 @@ public class BathtubBlock extends HorizontalDirectionalBlock implements SeatProv
             0.75, 3.5, 0, 2.75, 13.75, 15.25,
             13.25, 3.5, 0, 15.25, 13.75, 15.25,
             2.5, 3.5, 13.25, 13.5, 13.75, 15.25));
-
-    private static final MapCodec<BathtubBlock> CODEC = simpleCodec(BathtubBlock::new);
-
-    @Override
-    protected MapCodec<BathtubBlock> codec() {
-        return CODEC;
-    }
 
     public BathtubBlock(Properties properties) {
         super(properties);

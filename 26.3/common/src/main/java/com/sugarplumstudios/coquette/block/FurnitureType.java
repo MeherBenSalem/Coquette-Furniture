@@ -155,6 +155,6 @@ public enum FurnitureType {
 
     static BlockBehaviour.Properties decor(FurnitureColor color, SoundType sound) {
         return BlockIds.props().mapColor(color.mapColor()).sound(sound).strength(0.3F).noOcclusion()
-                .pushReaction(PushReaction.DESTROY);
+                .pushReaction(PushReaction.POPPED);
     }
 }

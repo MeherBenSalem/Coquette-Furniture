@@ -80,6 +80,6 @@ public enum DecorType {
 
     private static BlockBehaviour.Properties small(MapColor color, SoundType sound) {
         return BlockIds.props().mapColor(color).sound(sound).strength(0.3F).noOcclusion()
-                .pushReaction(PushReaction.DESTROY);
+                .pushReaction(PushReaction.POPPED);
     }
 }

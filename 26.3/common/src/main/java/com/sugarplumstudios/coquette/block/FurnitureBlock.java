@@ -1,8 +1,6 @@
 package com.sugarplumstudios.coquette.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.phys.shapes.Shapes;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.LevelReader;
@@ -33,8 +31,6 @@ import java.util.Map;
  */
 public class FurnitureBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock, DecorSurface {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    /** Block codecs are only used for data generation; furniture is never decoded from one. */
-    private static final MapCodec<FurnitureBlock> CODEC = simpleCodec(p -> new FurnitureBlock(p, Shapes.block()));
 
     private final Map<Direction, VoxelShape> shapes;
     private final boolean wallMounted;
@@ -50,11 +46,6 @@ public class FurnitureBlock extends HorizontalDirectionalBlock implements Simple
         this.wallMounted = wallMounted;
         this.surfaceSink = surfaceSink;
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
-    }
-
-    @Override
-    protected MapCodec<? extends FurnitureBlock> codec() {
-        return CODEC;
     }
 
     @Override

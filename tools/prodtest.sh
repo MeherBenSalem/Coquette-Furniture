@@ -13,6 +13,8 @@ ROOT=$(cd "$(dirname "$0")/.." && pwd)
 VERSION=$1; LOADER=$2
 BASE=${PRODTEST_DIR:-/tmp/coquette-prodtest}; DIR="$BASE/$VERSION-$LOADER"; mkdir -p "$DIR"
 JAVA=${JAVA:-java}
+# run.sh scripts call plain `java`
+[ "$JAVA" != java ] && export PATH="$(dirname "$JAVA"):$PATH"
 prop() { grep "^$1=" "$ROOT/$VERSION/gradle.properties" | cut -d= -f2-; }
 MC=$(prop minecraft_version)
 JAR=$(ls "$ROOT/$VERSION/$LOADER/build/libs/"coquettefurniture-$LOADER-$VERSION-*.jar | grep -v sources | head -1)
@@ -55,5 +57,5 @@ grep -hE 'Done \(|Found valid mod file coquettefurniture|- coquettefurniture ' s
 [ -f config/coquettefurniture-common.toml ] && echo "config/coquettefurniture-common.toml written (the mod initialised)" \
   || echo "MOD DID NOT INITIALISE (no config file)"
 echo "---- problems"
-grep -nE 'ERROR|Exception|FATAL|\bWARN\b.*(coquette|Coquette)' server.log | grep -vE 'server.properties' | head -40
+grep -nE 'ERROR|Exception|FATAL|\bWARN\b.*(coquette|Coquette)' server.log | grep -vE 'server.properties|Appender DebugFile|kqueue|Only supported on OSX' | head -40
 echo "---- end"

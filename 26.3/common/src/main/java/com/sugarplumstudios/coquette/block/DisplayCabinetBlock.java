@@ -2,6 +2,7 @@ package com.sugarplumstudios.coquette.block;
 
 import com.sugarplumstudios.coquette.block.entity.DisplayCabinetBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.Prediction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
@@ -54,7 +55,7 @@ public class DisplayCabinetBlock extends FurnitureBlock implements EntityBlock {
             if (!level.isClientSide()) {
                 ItemStack taken = cabinet.removeItem(slot);
                 if (!player.getInventory().add(taken)) {
-                    player.drop(taken, false);
+                    player.drop(taken, false, Prediction.SERVER_ONLY);
                 }
                 level.playSound(null, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.BLOCKS, 1.0F, 1.0F);
             }

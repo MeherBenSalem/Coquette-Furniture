@@ -47,8 +47,8 @@ public class BlockPreviewRenderer extends PictureInPictureRenderer<BlockPreviewR
     protected void renderToTexture(State state, PoseStack pose, SubmitNodeCollector collector) {
         // the texture's y axis points down; turn the model the right way up, then tilt it towards the viewer
         pose.scale(1.0F, -1.0F, -1.0F);
-        pose.mulPose(Axis.XP.rotationDegrees(30.0F));
-        pose.mulPose(Axis.YP.rotationDegrees(225.0F + state.yaw()));
+        pose.rotate(Axis.XP.rotationDegrees(30.0F));
+        pose.rotate(Axis.YP.rotationDegrees(225.0F + state.yaw()));
         Minecraft.getInstance().gameRenderer.lighting().setupFor(Lighting.Entry.ITEMS_3D);
         state.item().submit(pose, collector, 15728880, OverlayTexture.NO_OVERLAY, 0);
     }

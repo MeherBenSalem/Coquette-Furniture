@@ -79,7 +79,7 @@ public class DisplayCabinetRenderer implements BlockEntityRenderer<DisplayCabine
             pose.pushPose();
             // items are drawn centred on the pose, so lift each by half its height to stand on the shelf
             pose.translate(at[0], SLOTS[i][1] / 16.0D + (block ? 0.14D : 0.165D), at[1]);
-            pose.mulPose(Axis.YP.rotationDegrees(180.0F - state.facing.toYRot() + state.spin + i * 40.0F));
+            pose.rotate(Axis.YP.rotationDegrees(180.0F - state.facing.toYRot() + state.spin + i * 40.0F));
             float scale = block ? 0.55F : 0.32F;
             pose.scale(scale, scale, scale);
             item.submit(pose, collector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);

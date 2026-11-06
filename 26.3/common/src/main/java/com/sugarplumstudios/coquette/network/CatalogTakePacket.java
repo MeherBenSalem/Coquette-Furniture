@@ -8,6 +8,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.Prediction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;
@@ -69,7 +70,7 @@ public record CatalogTakePacket(List<Identifier> items, boolean stack) implement
             ItemStack stack = new ItemStack(item, packet.stack ? item.getDefaultMaxStackSize() : 1);
             last = stack.getHoverName();
             if (!player.getInventory().add(stack)) {
-                player.drop(stack, false);
+                player.drop(stack, false, Prediction.SERVER_ONLY);
             }
         }
         if (last != null) {
