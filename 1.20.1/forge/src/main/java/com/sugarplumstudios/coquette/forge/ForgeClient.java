@@ -14,6 +14,9 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 final class ForgeClient {
+    /** Dev only: the dev package is left out of the release jar. */
+    private static final boolean MARKETING = Boolean.getBoolean("coquettefurniture.marketing");
+
     private ForgeClient() {
     }
 
@@ -28,7 +31,7 @@ final class ForgeClient {
         MinecraftForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent event) -> {
             if (event.phase == TickEvent.Phase.END) {
                 CoquetteClient.tick();
-                if (MarketingShots.ENABLED) {
+                if (MARKETING) {
                     MarketingShots.onTick();
                 }
             }

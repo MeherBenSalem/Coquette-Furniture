@@ -16,7 +16,7 @@ public class BookshelfBlock extends FurnitureBlock {
         super(properties, northShape, false, 0);
     }
 
-    /** Forge and NeoForge call this (it is not a vanilla method); Fabric uses a mixin, see EnchantingBookshelves. */
+    /** Forge and NeoForge call this (it is not a vanilla method); Fabric uses a mixin, see EnchantingTableBlockMixin. */
     public float getEnchantPowerBonus(BlockState state, LevelReader level, BlockPos pos) {
         return CoquetteConfig.COMMON.bookshelfEnchanting.get() ? 1.0F : 0.0F;
     }

@@ -13,6 +13,8 @@ public final class CoquetteClient {
     public static final KeyMapping OPEN_CATALOG = new KeyMapping("key.coquettefurniture.catalog",
             InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_K, "key.categories.coquettefurniture");
 
+    private static final boolean SHOWCASE = Boolean.getBoolean("coquettefurniture.showcase");
+
     private CoquetteClient() {
     }
 
@@ -23,7 +25,8 @@ public final class CoquetteClient {
 
     /** Call at the end of every client tick. */
     public static void tick() {
-        if (ShowcaseHarness.ENABLED) {
+        // the dev package is left out of release jars, so only touch it when the dev property is set
+        if (SHOWCASE) {
             ShowcaseHarness.onTick();
         }
         Minecraft minecraft = Minecraft.getInstance();
