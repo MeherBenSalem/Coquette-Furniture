@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "giftbox": "coquettefurniture:block/baby_blue/paint",
     "ribbon": "coquettefurniture:block/white/bow",

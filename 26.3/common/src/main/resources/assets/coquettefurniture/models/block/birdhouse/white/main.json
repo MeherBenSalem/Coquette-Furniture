@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/birdhouse/main",
+  "textures": {
+    "bow": "coquettefurniture:block/white/bow",
+    "paint": "coquettefurniture:block/white/paint",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

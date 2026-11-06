@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/standing_mirror/item",
+  "textures": {
+    "bow": "coquettefurniture:block/mint/bow",
+    "paint": "coquettefurniture:block/mint/paint",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

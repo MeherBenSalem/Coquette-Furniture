@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "gold": "coquettefurniture:block/gold",
     "mirror": "coquettefurniture:block/mirror"

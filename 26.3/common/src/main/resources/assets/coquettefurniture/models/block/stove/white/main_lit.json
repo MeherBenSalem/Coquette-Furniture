@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/stove/main",
+  "textures": {
+    "burner": "coquettefurniture:block/burner_lit",
+    "ceramic": "coquettefurniture:block/white/ceramic",
+    "oven": "coquettefurniture:block/oven_lit",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/ceramic"
+  }
+}

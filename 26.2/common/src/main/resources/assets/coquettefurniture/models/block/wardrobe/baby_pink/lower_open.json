@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/wardrobe/lower_open",
-  "render_type": "minecraft:cutout",
   "textures": {
     "fabric": "coquettefurniture:block/baby_pink/fabric",
     "paint": "coquettefurniture:block/baby_pink/paint",

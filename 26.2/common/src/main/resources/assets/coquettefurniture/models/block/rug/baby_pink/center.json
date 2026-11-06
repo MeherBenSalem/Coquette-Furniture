@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/rug/center",
-  "render_type": "minecraft:cutout",
   "textures": {
     "rug": "coquettefurniture:block/baby_pink/rug",
     "particle": "coquettefurniture:block/baby_pink/rug"

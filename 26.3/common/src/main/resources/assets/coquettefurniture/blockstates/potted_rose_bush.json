@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/plant/potted_rose_bush"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/plant/potted_rose_bush",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/plant/potted_rose_bush",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/plant/potted_rose_bush",
+      "y": 270
+    }
+  }
+}

@@ -49,7 +49,7 @@ public class CandleDecorBlock extends DecorBlock {
                         held.shrink(1);
                     }
                 } else {
-                    held.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(hand));
+                    held.hurtAndBreak(1, player, hand);
                 }
             }
             return InteractionResult.SUCCESS;

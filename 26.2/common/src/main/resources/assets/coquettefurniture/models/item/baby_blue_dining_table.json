@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/dining_table/item",
-  "render_type": "minecraft:cutout",
   "textures": {
     "paint": "coquettefurniture:block/baby_blue/paint",
     "trim": "coquettefurniture:block/baby_blue/trim",

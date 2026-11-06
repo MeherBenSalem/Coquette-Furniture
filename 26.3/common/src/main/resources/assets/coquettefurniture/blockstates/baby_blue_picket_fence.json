@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "coquettefurniture:block/picket_fence/baby_blue/post"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/picket_fence/baby_blue/side",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/picket_fence/baby_blue/side",
+        "uvlock": false,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/picket_fence/baby_blue/side",
+        "uvlock": false,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/picket_fence/baby_blue/side",
+        "uvlock": false,
+        "y": 270
+      }
+    }
+  ]
+}

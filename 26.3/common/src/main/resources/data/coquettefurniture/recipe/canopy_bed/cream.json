@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:canopy_bed",
+  "pattern": [
+    "SDS",
+    "WWW",
+    "PPP"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "W": "#minecraft:wool",
+    "P": "#minecraft:planks",
+    "D": "minecraft:yellow_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_canopy_bed"
+  },
+  "show_notification": false
+}

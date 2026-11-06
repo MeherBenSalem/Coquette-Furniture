@@ -9,6 +9,6 @@ public final class ClientAccess {
     }
 
     public static void openCatalog() {
-        Minecraft.getInstance().setScreen(new CatalogScreen());
+        Minecraft.getInstance().gui.setScreen(new CatalogScreen());
     }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:wardrobe",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_wardrobe"
+  },
+  "group": "coquettefurniture:dye_wardrobe"
+}

@@ -26,11 +26,11 @@ public final class Pampering {
     }
 
     public static void compliment(ServerLevel level, Player player, Vec3 at) {
-        int index = level.random.nextInt(COMPLIMENTS);
+        int index = level.getRandom().nextInt(COMPLIMENTS);
         player.sendOverlayMessage(Component.translatable("message.coquettefurniture.compliment." + index)
                 .withStyle(ChatFormatting.LIGHT_PURPLE));
         level.playSound(null, at.x, at.y, at.z, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0F,
-                1.1F + level.random.nextFloat() * 0.3F);
+                1.1F + level.getRandom().nextFloat() * 0.3F);
         sparkle(level, at, 6);
     }
 

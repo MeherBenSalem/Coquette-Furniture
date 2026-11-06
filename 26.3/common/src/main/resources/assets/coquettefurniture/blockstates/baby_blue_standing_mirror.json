@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,half=lower": {
+      "model": "coquettefurniture:block/standing_mirror/baby_blue/lower"
+    },
+    "facing=north,half=upper": {
+      "model": "coquettefurniture:block/standing_mirror/baby_blue/upper"
+    },
+    "facing=east,half=lower": {
+      "model": "coquettefurniture:block/standing_mirror/baby_blue/lower",
+      "y": 90
+    },
+    "facing=east,half=upper": {
+      "model": "coquettefurniture:block/standing_mirror/baby_blue/upper",
+      "y": 90
+    },
+    "facing=south,half=lower": {
+      "model": "coquettefurniture:block/standing_mirror/baby_blue/lower",
+      "y": 180
+    },
+    "facing=south,half=upper": {
+      "model": "coquettefurniture:block/standing_mirror/baby_blue/upper",
+      "y": 180
+    },
+    "facing=west,half=lower": {
+      "model": "coquettefurniture:block/standing_mirror/baby_blue/lower",
+      "y": 270
+    },
+    "facing=west,half=upper": {
+      "model": "coquettefurniture:block/standing_mirror/baby_blue/upper",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:tea_set",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_tea_set"
+  },
+  "group": "coquettefurniture:dye_tea_set"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:swing_seat",
+  "pattern": [
+    "T T",
+    "T T",
+    "PDP"
+  ],
+  "key": {
+    "T": "minecraft:string",
+    "P": "#minecraft:planks",
+    "D": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_swing_seat"
+  },
+  "show_notification": false
+}

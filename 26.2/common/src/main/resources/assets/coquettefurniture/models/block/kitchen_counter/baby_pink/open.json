@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/kitchen_counter/open",
-  "render_type": "minecraft:cutout",
   "textures": {
     "lining": "coquettefurniture:block/baby_pink/lining",
     "paint": "coquettefurniture:block/baby_pink/paint",

@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/kitchen_sink/off",
+  "textures": {
+    "ceramic": "coquettefurniture:block/baby_blue/ceramic",
+    "paint": "coquettefurniture:block/baby_blue/paint",
+    "panel": "coquettefurniture:block/baby_blue/panel",
+    "trim": "coquettefurniture:block/baby_blue/trim",
+    "particle": "coquettefurniture:block/baby_blue/paint"
+  }
+}

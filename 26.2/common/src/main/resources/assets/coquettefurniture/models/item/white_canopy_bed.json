@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/canopy_bed/item",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bow": "coquettefurniture:block/white/bow",
     "fabric": "coquettefurniture:block/white/fabric",

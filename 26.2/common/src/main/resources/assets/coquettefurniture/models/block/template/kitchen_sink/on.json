@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "dark_metal": "coquettefurniture:block/dark_metal",
     "foam": "coquettefurniture:block/foam",

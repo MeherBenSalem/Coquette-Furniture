@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:coffee_table",
+  "pattern": [
+    "PDP",
+    "g g"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "g": "minecraft:gold_nugget",
+    "D": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_coffee_table"
+  },
+  "show_notification": false
+}

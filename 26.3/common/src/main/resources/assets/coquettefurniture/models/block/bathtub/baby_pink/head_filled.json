@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/bathtub/head_filled",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_pink/bow",
+    "ceramic": "coquettefurniture:block/baby_pink/ceramic",
+    "particle": "coquettefurniture:block/baby_pink/ceramic"
+  }
+}

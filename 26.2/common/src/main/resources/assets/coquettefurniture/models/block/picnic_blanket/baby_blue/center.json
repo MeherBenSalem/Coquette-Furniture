@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/picnic_blanket/center",
-  "render_type": "minecraft:cutout",
   "textures": {
     "gingham": "coquettefurniture:block/baby_blue/gingham",
     "particle": "coquettefurniture:block/baby_blue/gingham"

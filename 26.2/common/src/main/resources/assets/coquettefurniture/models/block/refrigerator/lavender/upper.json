@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/refrigerator/upper",
-  "render_type": "minecraft:cutout",
   "textures": {
     "ceramic": "coquettefurniture:block/lavender/ceramic",
     "particle": "coquettefurniture:block/lavender/ceramic"

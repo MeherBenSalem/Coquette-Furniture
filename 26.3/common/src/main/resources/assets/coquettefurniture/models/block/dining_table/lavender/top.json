@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/dining_table/top",
+  "textures": {
+    "paint": "coquettefurniture:block/lavender/paint",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

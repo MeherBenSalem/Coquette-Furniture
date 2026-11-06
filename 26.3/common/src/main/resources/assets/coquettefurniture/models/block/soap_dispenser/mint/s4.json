@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/soap_dispenser/s4",
+  "textures": {
+    "bow": "coquettefurniture:block/mint/bow",
+    "ceramic": "coquettefurniture:block/mint/ceramic",
+    "panel": "coquettefurniture:block/mint/panel",
+    "particle": "coquettefurniture:block/mint/ceramic"
+  }
+}

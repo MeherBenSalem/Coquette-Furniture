@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/curtains/item",
+  "textures": {
+    "bow": "coquettefurniture:block/cream/bow",
+    "fabric": "coquettefurniture:block/cream/fabric",
+    "print": "coquettefurniture:block/cream/print",
+    "particle": "coquettefurniture:block/cream/fabric"
+  }
+}

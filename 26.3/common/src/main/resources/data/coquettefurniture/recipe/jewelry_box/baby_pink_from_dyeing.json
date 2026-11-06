@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:jewelry_box",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_pink_jewelry_box"
+  },
+  "group": "coquettefurniture:dye_jewelry_box"
+}

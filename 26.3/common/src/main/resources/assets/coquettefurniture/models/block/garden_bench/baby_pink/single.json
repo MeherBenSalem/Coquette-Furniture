@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/garden_bench/single",
+  "textures": {
+    "paint": "coquettefurniture:block/baby_pink/paint",
+    "trim": "coquettefurniture:block/baby_pink/trim",
+    "particle": "coquettefurniture:block/baby_pink/paint"
+  }
+}

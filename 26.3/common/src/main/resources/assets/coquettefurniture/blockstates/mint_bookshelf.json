@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/bookshelf/mint/main"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/bookshelf/mint/main",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/bookshelf/mint/main",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/bookshelf/mint/main",
+      "y": 270
+    }
+  }
+}

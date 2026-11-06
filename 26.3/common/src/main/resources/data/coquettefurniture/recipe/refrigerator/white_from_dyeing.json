@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:refrigerator",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_refrigerator"
+  },
+  "group": "coquettefurniture:dye_refrigerator"
+}

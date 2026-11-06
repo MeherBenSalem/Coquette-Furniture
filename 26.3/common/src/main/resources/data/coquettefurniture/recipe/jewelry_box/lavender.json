@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:jewelry_box",
+  "pattern": [
+    "gDg",
+    "PCP"
+  ],
+  "key": {
+    "g": "minecraft:gold_nugget",
+    "P": "#minecraft:planks",
+    "C": "minecraft:chest",
+    "D": "minecraft:purple_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_jewelry_box"
+  },
+  "show_notification": false
+}

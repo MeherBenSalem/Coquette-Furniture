@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/bathroom_sink/off",
+  "textures": {
+    "ceramic": "coquettefurniture:block/white/ceramic",
+    "particle": "coquettefurniture:block/white/ceramic"
+  }
+}

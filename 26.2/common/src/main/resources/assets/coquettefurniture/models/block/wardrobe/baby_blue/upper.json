@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/wardrobe/upper",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bow": "coquettefurniture:block/baby_blue/bow",
     "paint": "coquettefurniture:block/baby_blue/paint",

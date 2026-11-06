@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/night_lamp/s4",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bow": "coquettefurniture:block/baby_pink/bow",
     "ceramic": "coquettefurniture:block/baby_pink/ceramic",

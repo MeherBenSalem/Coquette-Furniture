@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:standing_mirror",
+    "minecraft:purple_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_standing_mirror"
+  },
+  "group": "coquettefurniture:dye_standing_mirror"
+}

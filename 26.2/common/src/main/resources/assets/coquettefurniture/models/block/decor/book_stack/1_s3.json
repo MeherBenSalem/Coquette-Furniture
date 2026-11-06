@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "book_pink": "coquettefurniture:block/baby_pink/trim",
     "bow": "coquettefurniture:block/white/bow",

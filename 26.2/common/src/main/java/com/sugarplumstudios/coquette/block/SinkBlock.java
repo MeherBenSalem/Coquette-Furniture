@@ -13,7 +13,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -61,7 +61,7 @@ public class SinkBlock extends FurnitureBlock {
         }
         if (endless && held.is(Items.GLASS_BOTTLE)) {
             if (!level.isClientSide()) {
-                ItemStack water = PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER);
+                ItemStack water = PotionContents.createItemStack(Items.POTION, Potions.WATER);
                 player.setItemInHand(hand, ItemUtils.createFilledResult(held, player, water));
                 level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
                 level.gameEvent(player, GameEvent.FLUID_PICKUP, pos);

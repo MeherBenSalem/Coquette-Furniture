@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:decorative_pillow",
+  "pattern": [
+    " F ",
+    "WDW"
+  ],
+  "key": {
+    "F": "minecraft:feather",
+    "W": "#minecraft:wool",
+    "D": "minecraft:pink_dye"
+  },
+  "result": {
+    "count": 2,
+    "id": "coquettefurniture:baby_pink_decorative_pillow"
+  },
+  "show_notification": false
+}

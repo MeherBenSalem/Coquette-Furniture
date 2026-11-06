@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/stove/main",
-  "render_type": "minecraft:cutout",
   "textures": {
     "burner": "coquettefurniture:block/burner_lit",
     "ceramic": "coquettefurniture:block/baby_blue/ceramic",

@@ -2,7 +2,7 @@ package com.sugarplumstudios.coquette.block;
 
 import com.sugarplumstudios.coquette.config.CoquetteConfig;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -16,8 +16,8 @@ public class BookshelfBlock extends FurnitureBlock {
         super(properties, northShape, false, 0);
     }
 
-    /** Forge and NeoForge call this (it is not a vanilla method); Fabric uses a mixin, see EnchantingBookshelves. */
-    public float getEnchantPowerBonus(BlockState state, LevelReader level, BlockPos pos) {
+    /** Forge and NeoForge call this (it is not a vanilla method); Fabric uses a mixin, see EnchantingTableBlockMixin. */
+    public float getEnchantPowerBonus(BlockState state, BlockGetter level, BlockPos pos) {
         return CoquetteConfig.COMMON.bookshelfEnchanting.get() ? 1.0F : 0.0F;
     }
 }

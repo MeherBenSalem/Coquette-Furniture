@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/sofa/single",
-  "render_type": "minecraft:cutout",
   "textures": {
     "fabric": "coquettefurniture:block/baby_pink/fabric",
     "print": "coquettefurniture:block/baby_pink/print",

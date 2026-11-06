@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:coffee_table",
+    "minecraft:purple_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_coffee_table"
+  },
+  "group": "coquettefurniture:dye_coffee_table"
+}

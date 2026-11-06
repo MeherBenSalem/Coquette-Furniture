@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/dining_chair/main",
+  "textures": {
+    "bow": "coquettefurniture:block/white/bow",
+    "fabric": "coquettefurniture:block/white/fabric",
+    "paint": "coquettefurniture:block/white/paint",
+    "quilt": "coquettefurniture:block/white/quilt",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

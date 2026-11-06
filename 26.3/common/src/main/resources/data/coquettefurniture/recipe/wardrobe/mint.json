@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:wardrobe",
+  "pattern": [
+    "PDP",
+    "PCP",
+    "PCP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "C": "minecraft:chest",
+    "D": "minecraft:lime_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_wardrobe"
+  },
+  "show_notification": false
+}

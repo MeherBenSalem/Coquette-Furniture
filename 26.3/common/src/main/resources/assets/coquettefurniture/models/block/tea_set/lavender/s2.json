@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/tea_set/s2",
+  "textures": {
+    "bow": "coquettefurniture:block/lavender/bow",
+    "ceramic": "coquettefurniture:block/lavender/ceramic",
+    "particle": "coquettefurniture:block/lavender/ceramic"
+  }
+}

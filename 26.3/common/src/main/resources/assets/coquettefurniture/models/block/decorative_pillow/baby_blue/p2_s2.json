@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/decorative_pillow/p2_s2",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_blue/bow",
+    "fabric": "coquettefurniture:block/baby_blue/fabric",
+    "print": "coquettefurniture:block/baby_blue/print",
+    "quilt": "coquettefurniture:block/baby_blue/quilt",
+    "trim": "coquettefurniture:block/baby_blue/trim",
+    "particle": "coquettefurniture:block/baby_blue/fabric"
+  }
+}

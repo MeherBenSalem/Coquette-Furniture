@@ -102,7 +102,7 @@ public class BathtubBlock extends HorizontalDirectionalBlock implements SeatProv
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         if (!level.isClientSide()) {
             level.setBlock(pos.relative(state.getValue(FACING)), state.setValue(PART, BedPart.HEAD), Block.UPDATE_ALL);
-            level.blockUpdated(pos, Blocks.AIR);
+            level.updateNeighborsAt(pos, Blocks.AIR);
             state.updateNeighbourShapes(level, pos, Block.UPDATE_ALL);
         }
     }

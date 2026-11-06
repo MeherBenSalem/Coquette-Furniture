@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:night_lamp",
+  "pattern": [
+    " W ",
+    "DTD",
+    " g "
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "T": "minecraft:torch",
+    "g": "minecraft:gold_nugget",
+    "D": "minecraft:purple_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_night_lamp"
+  },
+  "show_notification": false
+}

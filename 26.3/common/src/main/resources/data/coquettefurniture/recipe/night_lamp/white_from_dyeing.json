@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:night_lamp",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_night_lamp"
+  },
+  "group": "coquettefurniture:dye_night_lamp"
+}

@@ -4,19 +4,16 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.BedBlock;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
 /**
  * A real bed (sleeping, respawn points and nether explosions all behave like
- * vanilla) drawn with a baked canopy model instead of vanilla's bed renderer.
+ * vanilla) drawn with a baked canopy model (vanilla beds are block models too since 26.1).
  */
 public class CanopyBedBlock extends BedBlock implements DecorSurface {
     private static final Map<Direction, VoxelShape> HEAD = ShapeUtil.horizontal(ShapeUtil.px(
@@ -37,17 +34,6 @@ public class CanopyBedBlock extends BedBlock implements DecorSurface {
 
     public FurnitureColor furnitureColor() {
         return color;
-    }
-
-    @Override
-    protected RenderShape getRenderShape(BlockState state) {
-        return RenderShape.MODEL;
-    }
-
-    @Nullable
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return null;
     }
 
     @Override

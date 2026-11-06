@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "box": "coquettefurniture:block/baby_pink/paint",
     "gold": "coquettefurniture:block/gold",

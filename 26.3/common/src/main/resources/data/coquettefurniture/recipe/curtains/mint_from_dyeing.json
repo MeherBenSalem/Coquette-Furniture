@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:curtains",
+    "minecraft:lime_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_curtains"
+  },
+  "group": "coquettefurniture:dye_curtains"
+}

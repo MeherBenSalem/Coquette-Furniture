@@ -1,0 +1,12 @@
+{
+  "parent": "coquettefurniture:block/template/canopy_bed/foot",
+  "textures": {
+    "bow": "coquettefurniture:block/cream/bow",
+    "paint": "coquettefurniture:block/cream/paint",
+    "print": "coquettefurniture:block/cream/print",
+    "quilt": "coquettefurniture:block/cream/quilt",
+    "sheer": "coquettefurniture:block/cream/sheer",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/paint"
+  }
+}

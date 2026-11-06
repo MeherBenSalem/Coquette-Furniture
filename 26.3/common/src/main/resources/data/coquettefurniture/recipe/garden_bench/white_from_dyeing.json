@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:garden_bench",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_garden_bench"
+  },
+  "group": "coquettefurniture:dye_garden_bench"
+}

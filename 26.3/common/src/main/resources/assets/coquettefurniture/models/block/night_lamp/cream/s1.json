@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/night_lamp/s1",
+  "textures": {
+    "bow": "coquettefurniture:block/cream/bow",
+    "ceramic": "coquettefurniture:block/cream/ceramic",
+    "shade": "coquettefurniture:block/cream/shade",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/shade"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/picket_fence/side",
+  "textures": {
+    "paint": "coquettefurniture:block/cream/paint",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/paint"
+  }
+}

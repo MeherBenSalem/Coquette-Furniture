@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/outdoor_table/main",
-  "render_type": "minecraft:cutout",
   "textures": {
     "paint": "coquettefurniture:block/white/paint",
     "trim": "coquettefurniture:block/white/trim",

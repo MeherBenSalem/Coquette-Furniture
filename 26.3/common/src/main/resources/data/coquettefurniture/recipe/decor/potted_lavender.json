@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "L",
+    "F"
+  ],
+  "key": {
+    "L": "minecraft:lilac",
+    "F": "minecraft:flower_pot"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:potted_lavender"
+  },
+  "show_notification": false
+}

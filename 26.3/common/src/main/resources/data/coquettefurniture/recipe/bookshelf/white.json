@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:bookshelf",
+  "pattern": [
+    "PDP",
+    "BBB",
+    "PPP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "B": "minecraft:book",
+    "D": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_bookshelf"
+  },
+  "show_notification": false
+}

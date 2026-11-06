@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "DFD"
+  ],
+  "key": {
+    "D": "minecraft:pink_dye",
+    "F": "minecraft:item_frame"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:heart_photo_frame"
+  },
+  "show_notification": false
+}

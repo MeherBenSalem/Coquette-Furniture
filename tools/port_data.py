@@ -122,6 +122,25 @@ def item_definitions(assets):
         dump(assets / "items" / model.name, {"model": {"type": "minecraft:model", "model": f"{MODID}:item/{model.stem}"}})
 
 
+# ----------------------------------------------------------------------- 26.x assets
+
+def lang_26(assets):
+    """1.21.9+: key mapping categories are ids; the label of coquettefurniture:main is key.category.coquettefurniture.main."""
+    for path in sorted((assets / "lang").glob("*.json")):
+        lang = load(path)
+        if "key.categories.coquettefurniture" in lang:
+            lang["key.category.coquettefurniture.main"] = lang["key.categories.coquettefurniture"]
+            dump(path, lang)
+
+
+def block_models_26(assets):
+    """26.1+: a quad's render layer comes from its texture's transparency, so Forge's "render_type" hint is dropped."""
+    for path in sorted((assets / "models").glob("**/*.json")):
+        model = load(path)
+        if model.pop("render_type", None) is not None:
+            dump(path, model)
+
+
 # ----------------------------------------------------------------------- driver
 
 def port(version):
@@ -149,6 +168,8 @@ def port(version):
 
     if is_26(version):
         item_definitions(target / "assets" / MODID)
+        lang_26(target / "assets" / MODID)
+        block_models_26(target / "assets" / MODID)
 
     fmt, lo, hi = PACK[version]
     pack = {"pack": {"description": {"text": "Coquette Furniture resources"}}}

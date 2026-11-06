@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:birdhouse",
+  "pattern": [
+    " P ",
+    "PDP",
+    " S "
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "S": "minecraft:stick",
+    "D": "minecraft:purple_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_birdhouse"
+  },
+  "show_notification": false
+}

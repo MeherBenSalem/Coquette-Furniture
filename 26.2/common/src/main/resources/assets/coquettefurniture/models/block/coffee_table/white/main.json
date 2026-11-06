@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/coffee_table/main",
-  "render_type": "minecraft:cutout",
   "textures": {
     "ceramic": "coquettefurniture:block/white/ceramic",
     "paint": "coquettefurniture:block/white/paint",

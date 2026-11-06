@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:coffee_table",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_pink_coffee_table"
+  },
+  "group": "coquettefurniture:dye_coffee_table"
+}

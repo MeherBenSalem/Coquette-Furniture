@@ -49,7 +49,7 @@ public class TallFurnitureBlock extends FurnitureBlock {
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockPos pos = context.getClickedPos();
         Level level = context.getLevel();
-        if (pos.getY() >= level.getMaxBuildHeight() - 1 || !level.getBlockState(pos.above()).canBeReplaced(context)) {
+        if (pos.getY() >= level.getMaxY() || !level.getBlockState(pos.above()).canBeReplaced(context)) {
             return null;
         }
         BlockState state = super.getStateForPlacement(context);

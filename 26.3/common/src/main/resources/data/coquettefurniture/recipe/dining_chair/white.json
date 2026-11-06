@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:dining_chair",
+  "pattern": [
+    "S  ",
+    "PDP",
+    "S S"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "P": "#minecraft:planks",
+    "D": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_dining_chair"
+  },
+  "show_notification": false
+}

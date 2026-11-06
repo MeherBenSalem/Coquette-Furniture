@@ -60,7 +60,7 @@ public final class CommonEvents {
                     .toList();
             player.awardRecipes(ours);
         }
-        if (CoquetteConfig.COMMON.giveCatalogOnFirstJoin.get() && !player.getTags().contains(RECEIVED_CATALOG)) {
+        if (CoquetteConfig.COMMON.giveCatalogOnFirstJoin.get() && !player.entityTags().contains(RECEIVED_CATALOG)) {
             player.addTag(RECEIVED_CATALOG);
             ItemStack catalog = new ItemStack(ModItems.INTERIOR_DESIGN_CATALOG.get());
             if (!player.getInventory().add(catalog)) {

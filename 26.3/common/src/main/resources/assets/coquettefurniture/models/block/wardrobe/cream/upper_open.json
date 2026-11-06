@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/wardrobe/upper_open",
+  "textures": {
+    "paint": "coquettefurniture:block/cream/paint",
+    "panel": "coquettefurniture:block/cream/panel",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/paint"
+  }
+}

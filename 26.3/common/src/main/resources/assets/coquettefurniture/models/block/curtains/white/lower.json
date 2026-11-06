@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/curtains/lower",
+  "textures": {
+    "print": "coquettefurniture:block/white/print",
+    "particle": "coquettefurniture:block/white/fabric"
+  }
+}

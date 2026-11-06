@@ -1,17 +1,20 @@
 package com.sugarplumstudios.coquette.client.screen;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.sugarplumstudios.coquette.block.Feature;
 import com.sugarplumstudios.coquette.block.FurnitureColor;
 import com.sugarplumstudios.coquette.block.Room;
 import com.sugarplumstudios.coquette.catalog.CatalogEntry;
 import com.sugarplumstudios.coquette.catalog.FurnitureSet;
+import com.sugarplumstudios.coquette.client.CoquetteClient;
+import com.sugarplumstudios.coquette.client.render.BlockPreviewRenderer;
 import com.sugarplumstudios.coquette.network.CatalogTakePacket;
 import com.sugarplumstudios.coquette.platform.Services;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.input.KeyEvent;
+import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
@@ -21,14 +24,17 @@ import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.CraftingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraft.client.gui.screens.recipebook.RecipeCollection;
+import net.minecraft.util.context.ContextMap;
+import net.minecraft.world.item.crafting.display.RecipeDisplay;
+import net.minecraft.world.item.crafting.display.RecipeDisplayEntry;
+import net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay;
+import net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay;
+import net.minecraft.world.item.crafting.display.SlotDisplay;
+import net.minecraft.world.item.crafting.display.SlotDisplayContext;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -92,10 +98,13 @@ public class CatalogScreen extends Screen {
     @Nullable
     private FurnitureSet selectedSet;
     @Nullable
-    private CraftingRecipe recipe;
+    private RecipeDisplay recipe;
     private ItemStack hovered = ItemStack.EMPTY;
     @Nullable
     private Component hoveredLabel;
+
+    /** Set by the dev showcase: the cursor sits over the grid under Xvfb, and its tooltip would hide the detail panel. */
+    private boolean showcase;
 
     private EditBox search;
     private Button takeOne;
@@ -183,15 +192,30 @@ public class CatalogScreen extends Screen {
         updateButtons();
     }
 
+    /**
+     * The piece's crafting recipe as the client knows it. Since 1.21.2 clients only receive the recipes in their
+     * recipe book (the mod unlocks all of its recipes on join unless that is turned off in the config).
+     */
     @Nullable
-    private CraftingRecipe findRecipe(Item item) {
-        if (minecraft == null || minecraft.level == null) {
+    private RecipeDisplay findRecipe(Item item) {
+        if (minecraft == null || minecraft.level == null || minecraft.player == null) {
             return null;
         }
-        return minecraft.level.getRecipeManager().getAllRecipesFor(RecipeType.CRAFTING).stream()
-                .filter(r -> r.getResultItem(minecraft.level.registryAccess()).is(item))
-                .min(Comparator.comparingInt(r -> r instanceof ShapedRecipe ? 0 : 1))
-                .orElse(null);
+        ContextMap context = SlotDisplayContext.fromLevel(minecraft.level);
+        RecipeDisplay best = null;
+        for (RecipeCollection collection : minecraft.player.getRecipeBook().getCollections()) {
+            for (RecipeDisplayEntry entry : collection.getRecipes()) {
+                RecipeDisplay display = entry.display();
+                if (!(display instanceof ShapedCraftingRecipeDisplay) && !(display instanceof ShapelessCraftingRecipeDisplay)) {
+                    continue;
+                }
+                if (display.result().resolveForFirstStack(context).is(item)
+                        && (best == null || display instanceof ShapedCraftingRecipeDisplay && !(best instanceof ShapedCraftingRecipeDisplay))) {
+                    best = display;
+                }
+            }
+        }
+        return best;
     }
 
     private void take(boolean stack) {
@@ -214,8 +238,7 @@ public class CatalogScreen extends Screen {
     // ------------------------------------------------------------------ rendering
 
     @Override
-    public void render(GuiGraphics g, int mouseX, int mouseY, float partialTick) {
-        renderBackground(g);
+    public void extractRenderState(GuiGraphicsExtractor g, int mouseX, int mouseY, float partialTick) {
         hovered = ItemStack.EMPTY;
         hoveredLabel = null;
         drawFrame(g);
@@ -228,15 +251,18 @@ public class CatalogScreen extends Screen {
             drawGrid(g, mouseX, mouseY);
             drawDetail(g, mouseX, mouseY);
         }
-        super.render(g, mouseX, mouseY, partialTick);
+        super.extractRenderState(g, mouseX, mouseY, partialTick);
+        if (showcase) {
+            return;
+        }
         if (!hovered.isEmpty()) {
-            g.renderTooltip(font, hovered, mouseX, mouseY);
+            g.setTooltipForNextFrame(font, hovered, mouseX, mouseY);
         } else if (hoveredLabel != null) {
-            g.renderTooltip(font, hoveredLabel, mouseX, mouseY);
+            g.setTooltipForNextFrame(font, hoveredLabel, mouseX, mouseY);
         }
     }
 
-    private void drawFrame(GuiGraphics g) {
+    private void drawFrame(GuiGraphicsExtractor g) {
         int r = left + panelWidth;
         int b = top + panelHeight;
         g.fill(left - 2, top - 2, r + 2, b + 2, BORDER_DARK);
@@ -251,14 +277,14 @@ public class CatalogScreen extends Screen {
         g.fill(left, top, r, top + 19, PANEL_SHADE);
         g.fill(left, top + 19, r, top + 20, BORDER);
         Component title = Component.literal("♡ ").append(this.title).append(" ♡");
-        g.drawString(font, title, left + (panelWidth - font.width(title)) / 2, top + 6, TEXT, false);
+        g.text(font, title, left + (panelWidth - font.width(title)) / 2, top + 6, TEXT, false);
         g.fill(left + SIDEBAR - 1, top + 20, left + SIDEBAR, top + panelHeight, BORDER);
         int dx = left + panelWidth - DETAIL;
         g.fill(dx - 1, top + 20, dx, top + panelHeight, BORDER);
         g.fill(dx, top + 20, left + panelWidth, top + panelHeight, PANEL_SHADE);
     }
 
-    private void drawTabs(GuiGraphics g, int mouseX, int mouseY) {
+    private void drawTabs(GuiGraphicsExtractor g, int mouseX, int mouseY) {
         int y = top + 24;
         for (Tab t : Tab.values()) {
             boolean hover = inside(mouseX, mouseY, left + 4, y, SIDEBAR - 9, 18);
@@ -267,17 +293,17 @@ public class CatalogScreen extends Screen {
                 g.fill(left + 4, y, left + 6, y + 18, BORDER_DARK);
             }
             Component label = Component.translatable(t.key);
-            g.drawString(font, font.plainSubstrByWidth(label.getString(), SIDEBAR - 16), left + 9, y + 5, TEXT, false);
+            g.text(font, font.plainSubstrByWidth(label.getString(), SIDEBAR - 16), left + 9, y + 5, TEXT, false);
             y += 20;
         }
         int pieces = tab == Tab.SETS ? FurnitureSet.values().length : shown.size();
         String count = Component.translatable("gui.coquettefurniture.catalog.items", pieces).getString();
         if (y + 12 < top + panelHeight) {
-            g.drawString(font, count, left + 9, top + panelHeight - 13, TEXT_SOFT, false);
+            g.text(font, count, left + 9, top + panelHeight - 13, TEXT_SOFT, false);
         }
     }
 
-    private void drawSwatches(GuiGraphics g, int mouseX, int mouseY) {
+    private void drawSwatches(GuiGraphicsExtractor g, int mouseX, int mouseY) {
         int x = left + SIDEBAR + 5;
         int y = top + 42;
         drawSwatch(g, x, y, 0xFFFFFFFF, colorFilter == null, true);
@@ -294,7 +320,7 @@ public class CatalogScreen extends Screen {
         }
     }
 
-    private void drawSwatch(GuiGraphics g, int x, int y, int rgb, boolean active, boolean rainbow) {
+    private void drawSwatch(GuiGraphicsExtractor g, int x, int y, int rgb, boolean active, boolean rainbow) {
         g.fill(x - 1, y - 1, x + 13, y + 13, active ? BORDER_DARK : SLOT_EDGE);
         g.fill(x, y, x + 12, y + 12, rgb);
         if (rainbow) {
@@ -305,7 +331,7 @@ public class CatalogScreen extends Screen {
         }
     }
 
-    private void drawGrid(GuiGraphics g, int mouseX, int mouseY) {
+    private void drawGrid(GuiGraphicsExtractor g, int mouseX, int mouseY) {
         int gx = left + SIDEBAR + 4;
         int gy = top + GRID_TOP;
         for (int i = 0; i < rows * columns; i++) {
@@ -319,7 +345,7 @@ public class CatalogScreen extends Screen {
                 continue;
             }
             ItemStack stack = new ItemStack(shown.get(index).item());
-            g.renderItem(stack, x + 1, y + 1);
+            g.item(stack, x + 1, y + 1);
             if (inside(mouseX, mouseY, x, y, CELL - 1, CELL - 1)) {
                 g.fill(x + 1, y + 1, x + CELL - 2, y + CELL - 2, 0x40FFFFFF);
                 hovered = stack;
@@ -334,31 +360,29 @@ public class CatalogScreen extends Screen {
         g.fill(barX, knobY, barX + 4, knobY + knob, BORDER_DARK);
     }
 
-    private void drawDetail(GuiGraphics g, int mouseX, int mouseY) {
+    private void drawDetail(GuiGraphicsExtractor g, int mouseX, int mouseY) {
         int dx = left + panelWidth - DETAIL + 4;
         int width = DETAIL - 8;
         int y = top + 24;
         if (selected == null) {
             for (FormattedCharSequence line : font.split(Component.translatable("gui.coquettefurniture.catalog.select"), width)) {
-                g.drawString(font, line, dx, y, TEXT_SOFT, false);
+                g.text(font, line, dx, y, TEXT_SOFT, false);
                 y += 10;
             }
             return;
         }
         ItemStack stack = new ItemStack(selected.item());
-        PoseStack pose = g.pose();
-        pose.pushPose();
-        pose.translate(dx + width / 2.0F - 20, y, 0);
-        pose.scale(2.5F, 2.5F, 2.5F);
-        g.renderItem(stack, 0, 0);
-        pose.popPose();
+        // the selected piece as a slowly turning 3D model, 40 pixels square
+        float yaw = (Util.getMillis() % 12000L) * 360.0F / 12000.0F;
+        int px = dx + width / 2 - 20;
+        CoquetteClient.submitPictureInPicture(g, BlockPreviewRenderer.state(stack, yaw, px, y, px + 40, y + 40, null));
         y += 44;
         for (FormattedCharSequence line : font.split(stack.getHoverName(), width)) {
-            g.drawString(font, line, dx + (width - font.width(line)) / 2, y, TEXT, false);
+            g.text(font, line, dx + (width - font.width(line)) / 2, y, TEXT, false);
             y += 10;
         }
         Component room = Component.translatable(selected.room().translationKey());
-        g.drawString(font, room, dx + (width - font.width(room)) / 2, y, TEXT_SOFT, false);
+        g.text(font, room, dx + (width - font.width(room)) / 2, y, TEXT_SOFT, false);
         y += 12;
         y = drawRecipe(g, dx, y, width, mouseX, mouseY);
         List<Component> lines = new ArrayList<>();
@@ -374,31 +398,35 @@ public class CatalogScreen extends Screen {
                 if (y + 9 > bottom) {
                     return;
                 }
-                g.drawString(font, part, dx, y, TEXT, false);
+                g.text(font, part, dx, y, TEXT, false);
                 y += 9;
             }
         }
         if (!creative() && y + 20 < bottom) {
             for (FormattedCharSequence part : font.split(Component.translatable("gui.coquettefurniture.catalog.survival"), width)) {
-                g.drawString(font, part, dx, y + 3, TEXT_SOFT, false);
+                g.text(font, part, dx, y + 3, TEXT_SOFT, false);
                 y += 9;
             }
         }
     }
 
-    private int drawRecipe(GuiGraphics g, int dx, int y, int width, int mouseX, int mouseY) {
+    private int drawRecipe(GuiGraphicsExtractor g, int dx, int y, int width, int mouseX, int mouseY) {
         if (recipe == null) {
             Component none = Component.translatable("gui.coquettefurniture.catalog.no_recipe");
-            g.drawString(font, none, dx + (width - font.width(none)) / 2, y, TEXT_SOFT, false);
+            g.text(font, none, dx + (width - font.width(none)) / 2, y, TEXT_SOFT, false);
             return y + 12;
         }
         int gw = 3;
         int gh = 3;
-        List<Ingredient> ingredients = recipe.getIngredients();
-        if (recipe instanceof ShapedRecipe shaped) {
-            gw = shaped.getWidth();
-            gh = shaped.getHeight();
+        List<SlotDisplay> ingredients;
+        if (recipe instanceof ShapedCraftingRecipeDisplay shaped) {
+            gw = shaped.width();
+            gh = shaped.height();
+            ingredients = shaped.ingredients();
+        } else {
+            ingredients = ((ShapelessCraftingRecipeDisplay) recipe).ingredients();
         }
+        ContextMap context = SlotDisplayContext.fromLevel(minecraft.level);
         int size = 16;
         int gridX = dx + (width - 3 * size) / 2;
         long cycle = Util.getMillis() / 1000L;
@@ -409,20 +437,20 @@ public class CatalogScreen extends Screen {
             int sy = y + row * size;
             g.fill(x, sy, x + size - 1, sy + size - 1, SLOT_EDGE);
             g.fill(x + 1, sy + 1, x + size - 2, sy + size - 2, SLOT);
-            int index = recipe instanceof ShapedRecipe ? (col < gw && row < gh ? row * gw + col : -1) : i;
+            int index = recipe instanceof ShapedCraftingRecipeDisplay ? (col < gw && row < gh ? row * gw + col : -1) : i;
             if (index < 0 || index >= ingredients.size()) {
                 continue;
             }
-            ItemStack[] options = ingredients.get(index).getItems();
-            if (options.length == 0) {
+            List<ItemStack> options = ingredients.get(index).resolveForStacks(context);
+            if (options.isEmpty()) {
                 continue;
             }
-            ItemStack option = options[(int) (cycle % options.length)];
-            g.pose().pushPose();
-            g.pose().translate(x, sy, 0);
-            g.pose().scale(0.9375F, 0.9375F, 0.9375F);
-            g.renderItem(option, 0, 0);
-            g.pose().popPose();
+            ItemStack option = options.get((int) (cycle % options.size()));
+            g.pose().pushMatrix();
+            g.pose().translate(x, sy);
+            g.pose().scale(0.9375F, 0.9375F);
+            g.item(option, 0, 0);
+            g.pose().popMatrix();
             if (inside(mouseX, mouseY, x, sy, size - 1, size - 1)) {
                 hovered = option;
             }
@@ -430,7 +458,7 @@ public class CatalogScreen extends Screen {
         return y + 3 * size + 5;
     }
 
-    private void drawSetList(GuiGraphics g, int mouseX, int mouseY) {
+    private void drawSetList(GuiGraphicsExtractor g, int mouseX, int mouseY) {
         int x = left + SIDEBAR + 4;
         int y = top + 24;
         int w = panelWidth - SIDEBAR - DETAIL - 8;
@@ -441,30 +469,30 @@ public class CatalogScreen extends Screen {
             g.fill(x + 1, y + 1, x + w - 1, y + 35, active ? SLOT_SELECTED : hover ? 0xFFFFF0F6 : SLOT);
             g.fill(x + 1, y + 1, x + 4, y + 35, 0xFF000000 | set.color());
             List<Item> pieces = set.pieces();
-            g.renderItem(new ItemStack(pieces.get(0)), x + 8, y + 10);
-            g.drawString(font, Component.translatable(set.translationKey()), x + 30, y + 7, TEXT, false);
-            g.drawString(font, Component.translatable("gui.coquettefurniture.catalog.pieces", pieces.size()), x + 30, y + 20,
+            g.item(new ItemStack(pieces.get(0)), x + 8, y + 10);
+            g.text(font, Component.translatable(set.translationKey()), x + 30, y + 7, TEXT, false);
+            g.text(font, Component.translatable("gui.coquettefurniture.catalog.pieces", pieces.size()), x + 30, y + 20,
                     TEXT_SOFT, false);
             y += 39;
         }
     }
 
-    private void drawSetDetail(GuiGraphics g, int mouseX, int mouseY) {
+    private void drawSetDetail(GuiGraphicsExtractor g, int mouseX, int mouseY) {
         int dx = left + panelWidth - DETAIL + 4;
         int width = DETAIL - 8;
         int y = top + 24;
         if (selectedSet == null) {
             for (FormattedCharSequence line : font.split(Component.translatable("gui.coquettefurniture.catalog.select"), width)) {
-                g.drawString(font, line, dx, y, TEXT_SOFT, false);
+                g.text(font, line, dx, y, TEXT_SOFT, false);
                 y += 10;
             }
             return;
         }
         Component name = Component.translatable(selectedSet.translationKey());
-        g.drawString(font, name, dx + (width - font.width(name)) / 2, y, TEXT, false);
+        g.text(font, name, dx + (width - font.width(name)) / 2, y, TEXT, false);
         y += 12;
         for (FormattedCharSequence line : font.split(Component.translatable(selectedSet.translationKey() + ".desc"), width)) {
-            g.drawString(font, line, dx, y, TEXT_SOFT, false);
+            g.text(font, line, dx, y, TEXT_SOFT, false);
             y += 9;
         }
         y += 4;
@@ -479,7 +507,7 @@ public class CatalogScreen extends Screen {
             g.fill(x, sy, x + CELL - 1, sy + CELL - 1, SLOT_EDGE);
             g.fill(x + 1, sy + 1, x + CELL - 2, sy + CELL - 2, SLOT);
             ItemStack stack = new ItemStack(pieces.get(i));
-            g.renderItem(stack, x + 1, sy + 1);
+            g.item(stack, x + 1, sy + 1);
             if (inside(mouseX, mouseY, x, sy, CELL - 1, CELL - 1)) {
                 hovered = stack;
             }
@@ -488,6 +516,7 @@ public class CatalogScreen extends Screen {
 
     /** Opens a tab and selects a piece, as if clicked (used by the dev showcase). */
     public void previewSelect(int tabIndex, Item item) {
+        showcase = true;
         tab = Tab.values()[tabIndex];
         refilter();
         for (CatalogEntry entry : shown) {
@@ -500,6 +529,7 @@ public class CatalogScreen extends Screen {
 
     /** Opens the sets tab with a set selected (used by the dev showcase). */
     public void previewSet(int setIndex) {
+        showcase = true;
         tab = Tab.SETS;
         selectedSet = FurnitureSet.values()[setIndex];
         updateButtons();
@@ -508,10 +538,12 @@ public class CatalogScreen extends Screen {
     // ------------------------------------------------------------------ input
 
     @Override
-    public boolean mouseClicked(double mouseX, double mouseY, int button) {
-        if (super.mouseClicked(mouseX, mouseY, button)) {
+    public boolean mouseClicked(MouseButtonEvent event, boolean doubleClick) {
+        if (super.mouseClicked(event, doubleClick)) {
             return true;
         }
+        double mouseX = event.x();
+        double mouseY = event.y();
         int y = top + 24;
         for (Tab t : Tab.values()) {
             if (inside(mouseX, mouseY, left + 4, y, SIDEBAR - 9, 18)) {
@@ -567,25 +599,25 @@ public class CatalogScreen extends Screen {
     }
 
     @Override
-    public boolean mouseScrolled(double mouseX, double mouseY, double delta) {
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
         if (tab != Tab.SETS) {
-            scroll = Mth.clamp(scroll - (int) Math.signum(delta), 0, maxScroll());
+            scroll = Mth.clamp(scroll - (int) Math.signum(scrollY), 0, maxScroll());
             return true;
         }
-        return super.mouseScrolled(mouseX, mouseY, delta);
+        return super.mouseScrolled(mouseX, mouseY, scrollX, scrollY);
     }
 
     @Override
-    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if (search.isFocused() && keyCode != 256) {
-            return search.keyPressed(keyCode, scanCode, modifiers) || search.canConsumeInput();
+    public boolean keyPressed(KeyEvent event) {
+        if (search.isFocused() && !event.isEscape()) {
+            return search.keyPressed(event) || search.canConsumeInput();
         }
         Minecraft mc = Minecraft.getInstance();
-        if (mc.options.keyInventory.matches(keyCode, scanCode)) {
+        if (mc.options.keyInventory.matches(event)) {
             onClose();
             return true;
         }
-        return super.keyPressed(keyCode, scanCode, modifiers);
+        return super.keyPressed(event);
     }
 
     @Override

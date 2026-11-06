@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/swing_seat/lower",
+  "textures": {
+    "fabric": "coquettefurniture:block/lavender/fabric",
+    "paint": "coquettefurniture:block/lavender/paint",
+    "print": "coquettefurniture:block/lavender/print",
+    "quilt": "coquettefurniture:block/lavender/quilt",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

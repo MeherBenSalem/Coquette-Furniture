@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/sofa/left",
+  "textures": {
+    "fabric": "coquettefurniture:block/lavender/fabric",
+    "print": "coquettefurniture:block/lavender/print",
+    "quilt": "coquettefurniture:block/lavender/quilt",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/fabric"
+  }
+}

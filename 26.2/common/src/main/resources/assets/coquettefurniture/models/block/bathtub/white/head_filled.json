@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/bathtub/head_filled",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bow": "coquettefurniture:block/white/bow",
     "ceramic": "coquettefurniture:block/white/ceramic",

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:wall_mirror",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_pink_wall_mirror"
+  },
+  "group": "coquettefurniture:dye_wall_mirror"
+}

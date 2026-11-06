@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/dining_table/skirt",
+  "textures": {
+    "paint": "coquettefurniture:block/white/paint",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

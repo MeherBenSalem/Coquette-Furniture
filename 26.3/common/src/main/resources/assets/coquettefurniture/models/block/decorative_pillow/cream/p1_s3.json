@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/decorative_pillow/p1_s3",
+  "textures": {
+    "fabric": "coquettefurniture:block/cream/fabric",
+    "quilt": "coquettefurniture:block/cream/quilt",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/fabric"
+  }
+}

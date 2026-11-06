@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/dresser/open",
-  "render_type": "minecraft:cutout",
   "textures": {
     "lining": "coquettefurniture:block/cream/lining",
     "paint": "coquettefurniture:block/cream/paint",

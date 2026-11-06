@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "book_blue": "coquettefurniture:block/baby_blue/trim",
     "book_lavender": "coquettefurniture:block/lavender/trim",

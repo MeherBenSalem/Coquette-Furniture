@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/coffee_table/main",
+  "textures": {
+    "ceramic": "coquettefurniture:block/lavender/ceramic",
+    "paint": "coquettefurniture:block/lavender/paint",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

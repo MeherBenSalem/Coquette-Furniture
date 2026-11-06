@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "coquettefurniture:block/rug/lavender/center"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/rug/lavender/edge"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/rug/lavender/edge",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/rug/lavender/edge",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/rug/lavender/edge",
+        "y": 270
+      }
+    }
+  ]
+}

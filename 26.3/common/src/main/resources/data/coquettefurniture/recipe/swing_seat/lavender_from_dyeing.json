@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:swing_seat",
+    "minecraft:purple_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_swing_seat"
+  },
+  "group": "coquettefurniture:dye_swing_seat"
+}

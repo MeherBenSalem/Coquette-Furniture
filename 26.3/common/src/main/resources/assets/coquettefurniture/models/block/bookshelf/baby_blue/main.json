@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/bookshelf/main",
+  "textures": {
+    "ceramic": "coquettefurniture:block/baby_blue/ceramic",
+    "paint": "coquettefurniture:block/baby_blue/paint",
+    "print": "coquettefurniture:block/baby_blue/print",
+    "trim": "coquettefurniture:block/baby_blue/trim",
+    "particle": "coquettefurniture:block/baby_blue/paint"
+  }
+}

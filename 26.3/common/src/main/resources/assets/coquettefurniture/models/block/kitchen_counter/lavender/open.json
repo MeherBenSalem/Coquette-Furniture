@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/kitchen_counter/open",
+  "textures": {
+    "lining": "coquettefurniture:block/lavender/lining",
+    "paint": "coquettefurniture:block/lavender/paint",
+    "panel": "coquettefurniture:block/lavender/panel",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

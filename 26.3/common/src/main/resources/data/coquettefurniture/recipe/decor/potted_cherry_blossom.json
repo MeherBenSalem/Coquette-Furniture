@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "C",
+    "F"
+  ],
+  "key": {
+    "C": "minecraft:cherry_sapling",
+    "F": "minecraft:flower_pot"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:potted_cherry_blossom"
+  },
+  "show_notification": false
+}

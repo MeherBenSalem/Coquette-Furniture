@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:display_cabinet",
+    "minecraft:lime_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_display_cabinet"
+  },
+  "group": "coquettefurniture:dye_display_cabinet"
+}

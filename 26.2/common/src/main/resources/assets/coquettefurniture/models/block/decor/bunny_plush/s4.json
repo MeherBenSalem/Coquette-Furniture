@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "bunny": "coquettefurniture:block/white/fabric",
     "bunny_inner": "coquettefurniture:block/baby_pink/panel",

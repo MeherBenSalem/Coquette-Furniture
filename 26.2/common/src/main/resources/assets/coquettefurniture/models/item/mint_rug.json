@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/rug/item",
-  "render_type": "minecraft:cutout",
   "textures": {
     "rug": "coquettefurniture:block/mint/rug",
     "rug_edge": "coquettefurniture:block/mint/rug_edge",

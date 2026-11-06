@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:kitchen_cabinet",
+  "pattern": [
+    "QQQ",
+    "PDP",
+    "PCP"
+  ],
+  "key": {
+    "Q": "minecraft:quartz",
+    "P": "#minecraft:planks",
+    "C": "minecraft:chest",
+    "D": "minecraft:lime_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_kitchen_cabinet"
+  },
+  "show_notification": false
+}

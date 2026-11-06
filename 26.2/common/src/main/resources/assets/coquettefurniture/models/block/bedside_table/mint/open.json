@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/bedside_table/open",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bow": "coquettefurniture:block/mint/bow",
     "lining": "coquettefurniture:block/mint/lining",

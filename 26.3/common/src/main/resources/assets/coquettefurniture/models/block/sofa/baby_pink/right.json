@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/sofa/right",
+  "textures": {
+    "fabric": "coquettefurniture:block/baby_pink/fabric",
+    "print": "coquettefurniture:block/baby_pink/print",
+    "quilt": "coquettefurniture:block/baby_pink/quilt",
+    "trim": "coquettefurniture:block/baby_pink/trim",
+    "particle": "coquettefurniture:block/baby_pink/fabric"
+  }
+}

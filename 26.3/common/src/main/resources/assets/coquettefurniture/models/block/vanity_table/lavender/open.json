@@ -1,0 +1,12 @@
+{
+  "parent": "coquettefurniture:block/template/vanity_table/open",
+  "textures": {
+    "bow": "coquettefurniture:block/lavender/bow",
+    "ceramic": "coquettefurniture:block/lavender/ceramic",
+    "lining": "coquettefurniture:block/lavender/lining",
+    "paint": "coquettefurniture:block/lavender/paint",
+    "panel": "coquettefurniture:block/lavender/panel",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

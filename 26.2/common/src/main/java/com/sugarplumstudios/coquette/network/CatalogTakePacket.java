@@ -66,7 +66,7 @@ public record CatalogTakePacket(List<Identifier> items, boolean stack) implement
             if (item == null) {
                 continue;
             }
-            ItemStack stack = new ItemStack(item, packet.stack ? item.getMaxStackSize() : 1);
+            ItemStack stack = new ItemStack(item, packet.stack ? item.getDefaultMaxStackSize() : 1);
             last = stack.getHoverName();
             if (!player.getInventory().add(stack)) {
                 player.drop(stack, false);

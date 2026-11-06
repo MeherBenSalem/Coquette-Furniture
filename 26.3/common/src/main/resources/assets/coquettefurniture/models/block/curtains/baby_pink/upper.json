@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/curtains/upper",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_pink/bow",
+    "fabric": "coquettefurniture:block/baby_pink/fabric",
+    "print": "coquettefurniture:block/baby_pink/print",
+    "particle": "coquettefurniture:block/baby_pink/fabric"
+  }
+}

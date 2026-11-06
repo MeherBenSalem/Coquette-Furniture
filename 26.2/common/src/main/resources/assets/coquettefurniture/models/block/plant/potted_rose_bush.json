@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "bark": "coquettefurniture:block/bark",
     "bow": "coquettefurniture:block/baby_pink/bow",

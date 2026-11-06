@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:picket_fence",
+    "minecraft:purple_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_picket_fence"
+  },
+  "group": "coquettefurniture:dye_picket_fence"
+}

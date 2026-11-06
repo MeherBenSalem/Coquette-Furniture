@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/refrigerator/lower_open",
+  "textures": {
+    "ceramic": "coquettefurniture:block/white/ceramic",
+    "particle": "coquettefurniture:block/white/ceramic"
+  }
+}

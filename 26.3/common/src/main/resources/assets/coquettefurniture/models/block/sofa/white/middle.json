@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/sofa/middle",
+  "textures": {
+    "fabric": "coquettefurniture:block/white/fabric",
+    "quilt": "coquettefurniture:block/white/quilt",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/fabric"
+  }
+}

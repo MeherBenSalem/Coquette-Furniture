@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/birdhouse/main",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_pink/bow",
+    "paint": "coquettefurniture:block/baby_pink/paint",
+    "trim": "coquettefurniture:block/baby_pink/trim",
+    "particle": "coquettefurniture:block/baby_pink/paint"
+  }
+}

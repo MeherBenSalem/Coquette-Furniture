@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/bedside_table/closed",
-  "render_type": "minecraft:cutout",
   "textures": {
     "paint": "coquettefurniture:block/lavender/paint",
     "panel": "coquettefurniture:block/lavender/panel",

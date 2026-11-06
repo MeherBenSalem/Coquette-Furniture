@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "dress1": "coquettefurniture:block/baby_pink/print",
     "dress2": "coquettefurniture:block/lavender/gingham",

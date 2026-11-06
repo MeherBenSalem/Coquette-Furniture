@@ -23,11 +23,11 @@ import net.minecraft.client.Screenshot;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.LevelSettings;
 import net.minecraft.world.level.WorldDataConfiguration;
@@ -70,12 +70,15 @@ public final class ShowcaseHarness {
     private static void createWorld(Minecraft mc) {
         worldRequested = true;
         mc.getWindow().setWindowed(1280, 720);
-        mc.options.hideGui = true;
-        LevelSettings settings = new LevelSettings("Coquette Showcase", GameType.CREATIVE, false, Difficulty.PEACEFUL, true,
-                new GameRules(), WorldDataConfiguration.DEFAULT);
+        if (!mc.gui.hud.isHidden()) {
+            mc.gui.hud.toggle();
+        }
+        LevelSettings settings = new LevelSettings("Coquette Showcase", GameType.CREATIVE,
+                new LevelSettings.DifficultySettings(Difficulty.PEACEFUL, false, false), true, WorldDataConfiguration.DEFAULT);
         mc.createWorldOpenFlows().createFreshLevel("coquette_showcase_" + System.currentTimeMillis(), settings,
                 new WorldOptions(1L, false, false),
-                access -> access.registryOrThrow(Registries.WORLD_PRESET).getHolderOrThrow(WorldPresets.FLAT).value().createWorldDimensions());
+                access -> access.lookupOrThrow(Registries.WORLD_PRESET).getOrThrow(WorldPresets.FLAT).value().createWorldDimensions(),
+                mc.gui.screen());
     }
 
     /** Called by every loader at the end of each client tick. */
@@ -85,7 +88,7 @@ public final class ShowcaseHarness {
         }
         Minecraft mc = Minecraft.getInstance();
         // on a fresh run folder the first menu is the accessibility onboarding screen, not the title screen
-        if (!worldRequested && mc.level == null && mc.screen != null && mc.getOverlay() == null) {
+        if (!worldRequested && mc.level == null && mc.gui.screen() != null && mc.gui.overlay() == null) {
             mc.options.onboardAccessibility = false;
             mc.options.save();
             createWorld(mc);
@@ -109,10 +112,10 @@ public final class ShowcaseHarness {
             Shot shot = SHOTS.get(shotIndex);
             if (phase % 70 == 0) {
                 mc.player.getAbilities().flying = true;
-                mc.player.moveTo(shot.x, shot.y, shot.z, shot.yaw, shot.pitch);
+                mc.player.snapTo(shot.x, shot.y, shot.z, shot.yaw, shot.pitch);
                 mc.player.setDeltaMovement(0, 0, 0);
             } else if (phase % 70 == 69) {
-                Screenshot.grab(mc.gameDirectory, "coquette_" + shot.name + ".png", mc.getMainRenderTarget(), msg -> {
+                Screenshot.grab(mc.gameDirectory, "coquette_" + shot.name + ".png", mc.gameRenderer.mainRenderTarget(), 1, msg -> {
                 });
                 shotIndex++;
             }
@@ -120,18 +123,18 @@ public final class ShowcaseHarness {
         }
         catalogStage++;
         if (catalogStage == 1) {
-            GLFW.glfwSetCursorPos(mc.getWindow().getWindow(), 2, 2);
-            mc.setScreen(new CatalogScreen());
-        } else if (catalogStage == 10 && mc.screen instanceof CatalogScreen catalog) {
+            GLFW.glfwSetCursorPos(mc.getWindow().handle(), 2, 2);
+            mc.gui.setScreen(new CatalogScreen());
+        } else if (catalogStage == 10 && mc.gui.screen() instanceof CatalogScreen catalog) {
             catalog.previewSelect(1, ModItems.furniture(FurnitureType.VANITY_TABLE, FurnitureColor.BABY_PINK));
         } else if (catalogStage == 30) {
-            Screenshot.grab(mc.gameDirectory, "coquette_catalog.png", mc.getMainRenderTarget(), msg -> {
-            });
-        } else if (catalogStage == 35 && mc.screen instanceof CatalogScreen catalog) {
+            Screenshot.grab(mc.gameDirectory, "coquette_catalog.png", mc.gameRenderer.mainRenderTarget(), 1, msg -> {
+                });
+        } else if (catalogStage == 35 && mc.gui.screen() instanceof CatalogScreen catalog) {
             catalog.previewSet(0);
         } else if (catalogStage == 55) {
-            Screenshot.grab(mc.gameDirectory, "coquette_catalog_sets.png", mc.getMainRenderTarget(), msg -> {
-            });
+            Screenshot.grab(mc.gameDirectory, "coquette_catalog_sets.png", mc.gameRenderer.mainRenderTarget(), 1, msg -> {
+                });
         } else if (catalogStage == 70) {
             mc.stop();
         }
@@ -190,13 +193,15 @@ public final class ShowcaseHarness {
     }
 
     private static void build(ServerLevel level) {
-        level.setDayTime(6000);
-        level.setWeatherParameters(6000, 0, false, false);
-        level.getGameRules().getRule(GameRules.RULE_DAYLIGHT).set(false, level.getServer());
+        // world time is kept by clocks since 26.1; the commands are the stable way to set it
+        MinecraftServer server = level.getServer();
+        for (String command : new String[]{"time set 6000", "time pause", "weather clear 1000000"}) {
+            server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withSuppressedOutput(), command);
+        }
         Direction s = Direction.SOUTH;
 
         // bedroom (walls on the north and west, camera to the south-east looking north-west)
-        room(level, 0, 0, Blocks.BIRCH_PLANKS.defaultBlockState(), Blocks.PINK_TERRACOTTA.defaultBlockState());
+        room(level, 0, 0, Blocks.BIRCH_PLANKS.defaultBlockState(), Blocks.DYED_TERRACOTTA.pink().defaultBlockState());
         BlockState bed = f(FurnitureType.CANOPY_BED, FurnitureColor.BABY_PINK, Direction.NORTH);
         put(level, 3, Y, 0, bed.setValue(BedBlock.PART, BedPart.HEAD));
         put(level, 3, Y, 1, bed.setValue(BedBlock.PART, BedPart.FOOT));
@@ -225,7 +230,7 @@ public final class ShowcaseHarness {
 
         // living room
         int lx = 14;
-        room(level, lx, 0, Blocks.OAK_PLANKS.defaultBlockState(), Blocks.LIGHT_BLUE_TERRACOTTA.defaultBlockState());
+        room(level, lx, 0, Blocks.OAK_PLANKS.defaultBlockState(), Blocks.DYED_TERRACOTTA.lightBlue().defaultBlockState());
         for (int x = lx + 2; x <= lx + 4; x++) {
             put(level, x, Y, 0, f(FurnitureType.SOFA, FurnitureColor.BABY_BLUE, s));
         }
@@ -257,7 +262,7 @@ public final class ShowcaseHarness {
 
         // kitchen
         int kx = 28;
-        room(level, kx, 0, Blocks.SMOOTH_QUARTZ.defaultBlockState(), Blocks.LIME_TERRACOTTA.defaultBlockState());
+        room(level, kx, 0, Blocks.SMOOTH_QUARTZ.defaultBlockState(), Blocks.DYED_TERRACOTTA.lime().defaultBlockState());
         tall(level, kx, Y, 0, f(FurnitureType.REFRIGERATOR, FurnitureColor.MINT, s));
         tall(level, kx + 1, Y, 0, f(FurnitureType.REFRIGERATOR, FurnitureColor.MINT, s).setValue(StorageBlock.OPEN, true));
         put(level, kx + 2, Y, 0, f(FurnitureType.KITCHEN_COUNTER, FurnitureColor.CREAM, s));
@@ -279,7 +284,7 @@ public final class ShowcaseHarness {
 
         // bathroom
         int bx = 42;
-        room(level, bx, 0, Blocks.WHITE_CONCRETE.defaultBlockState(), Blocks.LIGHT_BLUE_CONCRETE.defaultBlockState());
+        room(level, bx, 0, Blocks.CONCRETE.white().defaultBlockState(), Blocks.CONCRETE.lightBlue().defaultBlockState());
         BlockState tub = f(FurnitureType.BATHTUB, FurnitureColor.BABY_BLUE, Direction.WEST).setValue(BathtubBlock.FILLED, true);
         put(level, bx, Y, 1, tub.setValue(BathtubBlock.PART, BedPart.HEAD));
         put(level, bx + 1, Y, 1, tub.setValue(BathtubBlock.PART, BedPart.FOOT));

@@ -1,0 +1,13 @@
+{
+  "parent": "coquettefurniture:block/template/decorative_pillow/p3_s3",
+  "textures": {
+    "bow": "coquettefurniture:block/mint/bow",
+    "fabric": "coquettefurniture:block/mint/fabric",
+    "lining": "coquettefurniture:block/mint/lining",
+    "print": "coquettefurniture:block/mint/print",
+    "quilt": "coquettefurniture:block/mint/quilt",
+    "stripe": "coquettefurniture:block/mint/stripe",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/fabric"
+  }
+}

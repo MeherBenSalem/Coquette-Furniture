@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "glass_mint": "coquettefurniture:block/glass_mint",
     "glass_pink": "coquettefurniture:block/glass_pink",

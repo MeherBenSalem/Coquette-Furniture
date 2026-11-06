@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/garden_bench/single",
-  "render_type": "minecraft:cutout",
   "textures": {
     "paint": "coquettefurniture:block/baby_pink/paint",
     "trim": "coquettefurniture:block/baby_pink/trim",

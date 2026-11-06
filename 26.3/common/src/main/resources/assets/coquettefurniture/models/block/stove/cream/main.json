@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/stove/main",
+  "textures": {
+    "ceramic": "coquettefurniture:block/cream/ceramic",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/ceramic"
+  }
+}

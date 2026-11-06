@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:dining_table",
+  "pattern": [
+    "PPP",
+    "SDS",
+    "S S"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "S": "minecraft:stick",
+    "D": "minecraft:yellow_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_dining_table"
+  },
+  "show_notification": false
+}

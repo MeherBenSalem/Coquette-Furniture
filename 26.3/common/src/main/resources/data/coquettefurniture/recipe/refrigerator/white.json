@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:refrigerator",
+  "pattern": [
+    "IDI",
+    "ICI",
+    "I I"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "C": "minecraft:chest",
+    "D": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_refrigerator"
+  },
+  "show_notification": false
+}

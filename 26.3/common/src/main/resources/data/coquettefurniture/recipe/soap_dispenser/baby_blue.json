@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:soap_dispenser",
+  "pattern": [
+    " i ",
+    "KDK",
+    " K "
+  ],
+  "key": {
+    "i": "minecraft:iron_nugget",
+    "K": "minecraft:clay_ball",
+    "D": "minecraft:light_blue_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_soap_dispenser"
+  },
+  "show_notification": false
+}

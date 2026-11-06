@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/jewelry_box/closed_s0",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bow": "coquettefurniture:block/baby_blue/bow",
     "paint": "coquettefurniture:block/baby_blue/paint",

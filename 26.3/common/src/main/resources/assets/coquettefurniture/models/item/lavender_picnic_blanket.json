@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/picnic_blanket/item",
+  "textures": {
+    "gingham": "coquettefurniture:block/lavender/gingham",
+    "particle": "coquettefurniture:block/lavender/gingham"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/kitchen_cabinet/closed",
+  "textures": {
+    "paint": "coquettefurniture:block/cream/paint",
+    "panel": "coquettefurniture:block/cream/panel",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/paint"
+  }
+}

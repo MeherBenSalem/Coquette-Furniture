@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "bow": "coquettefurniture:block/lavender/bow",
     "gold": "coquettefurniture:block/gold",

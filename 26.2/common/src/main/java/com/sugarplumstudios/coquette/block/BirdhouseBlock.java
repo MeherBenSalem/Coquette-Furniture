@@ -31,10 +31,10 @@ public class BirdhouseBlock extends FurnitureBlock {
         if (level instanceof ServerLevel server) {
             Vec3 bird = DecorBlock.modelPoint(state, pos, 8, 10.5, 3.5);
             server.playSound(null, bird.x, bird.y, bird.z, SoundEvents.PARROT_AMBIENT, SoundSource.BLOCKS, 0.8F,
-                    1.4F + server.random.nextFloat() * 0.4F);
+                    1.4F + server.getRandom().nextFloat() * 0.4F);
             for (int i = 0; i < 3; i++) {
                 server.sendParticles(ParticleTypes.NOTE, bird.x, bird.y + 0.3D + i * 0.15D, bird.z, 0,
-                        server.random.nextDouble(), 0.0D, 0.0D, 1.0D);
+                        server.getRandom().nextDouble(), 0.0D, 0.0D, 1.0D);
             }
         }
         return InteractionResult.SUCCESS;
@@ -42,7 +42,7 @@ public class BirdhouseBlock extends FurnitureBlock {
 
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
-        if (CoquetteConfig.CLIENT.birdhouseChirps.get() && level.isDay() && random.nextInt(200) == 0) {
+        if (CoquetteConfig.CLIENT.birdhouseChirps.get() && level.isBrightOutside() && random.nextInt(200) == 0) {
             Vec3 bird = DecorBlock.modelPoint(state, pos, 8, 10.5, 3.5);
             level.playLocalSound(bird.x, bird.y, bird.z, SoundEvents.PARROT_AMBIENT, SoundSource.AMBIENT, 0.5F,
                     1.5F + random.nextFloat() * 0.4F, false);

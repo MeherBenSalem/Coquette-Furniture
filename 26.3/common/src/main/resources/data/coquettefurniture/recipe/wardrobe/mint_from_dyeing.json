@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:wardrobe",
+    "minecraft:lime_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_wardrobe"
+  },
+  "group": "coquettefurniture:dye_wardrobe"
+}

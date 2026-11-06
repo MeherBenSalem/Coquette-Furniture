@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "bird": "coquettefurniture:block/baby_blue/fabric",
     "dark_metal": "coquettefurniture:block/dark_metal",

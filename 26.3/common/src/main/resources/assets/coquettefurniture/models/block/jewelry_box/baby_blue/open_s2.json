@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/jewelry_box/open_s2",
+  "textures": {
+    "lining": "coquettefurniture:block/baby_blue/lining",
+    "paint": "coquettefurniture:block/baby_blue/paint",
+    "quilt": "coquettefurniture:block/baby_blue/quilt",
+    "particle": "coquettefurniture:block/baby_blue/paint"
+  }
+}

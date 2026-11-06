@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/curtains/lower",
-  "render_type": "minecraft:cutout",
   "textures": {
     "print": "coquettefurniture:block/white/print",
     "particle": "coquettefurniture:block/white/fabric"

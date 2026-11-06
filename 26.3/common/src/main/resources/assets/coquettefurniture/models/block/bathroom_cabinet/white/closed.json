@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/bathroom_cabinet/closed",
+  "textures": {
+    "paint": "coquettefurniture:block/white/paint",
+    "panel": "coquettefurniture:block/white/panel",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

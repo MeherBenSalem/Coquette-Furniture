@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:standing_mirror",
+  "pattern": [
+    "SMS",
+    "SMS",
+    "SDS"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "M": "minecraft:glass_pane",
+    "D": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_standing_mirror"
+  },
+  "show_notification": false
+}

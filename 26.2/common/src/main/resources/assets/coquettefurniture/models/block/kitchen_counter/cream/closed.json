@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/kitchen_counter/closed",
-  "render_type": "minecraft:cutout",
   "textures": {
     "paint": "coquettefurniture:block/cream/paint",
     "panel": "coquettefurniture:block/cream/panel",

@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/flower_pot/s4",
+  "textures": {
+    "ceramic": "coquettefurniture:block/cream/ceramic",
+    "particle": "coquettefurniture:block/cream/ceramic"
+  }
+}

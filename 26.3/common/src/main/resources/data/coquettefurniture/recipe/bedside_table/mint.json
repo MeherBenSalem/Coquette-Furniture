@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:bedside_table",
+  "pattern": [
+    "PDP",
+    "PCP",
+    "S S"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "C": "minecraft:chest",
+    "S": "minecraft:stick",
+    "D": "minecraft:lime_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_bedside_table"
+  },
+  "show_notification": false
+}

@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/picket_fence/side",
-  "render_type": "minecraft:cutout",
   "textures": {
     "paint": "coquettefurniture:block/mint/paint",
     "trim": "coquettefurniture:block/mint/trim",

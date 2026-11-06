@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/towel_rack/main",
+  "textures": {
+    "bow": "coquettefurniture:block/lavender/bow",
+    "fabric": "coquettefurniture:block/lavender/fabric",
+    "stripe": "coquettefurniture:block/lavender/stripe",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/fabric"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:bathroom_sink",
+    "minecraft:lime_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_bathroom_sink"
+  },
+  "group": "coquettefurniture:dye_bathroom_sink"
+}

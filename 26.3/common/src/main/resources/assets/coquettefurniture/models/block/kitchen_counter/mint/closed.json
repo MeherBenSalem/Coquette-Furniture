@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/kitchen_counter/closed",
+  "textures": {
+    "paint": "coquettefurniture:block/mint/paint",
+    "panel": "coquettefurniture:block/mint/panel",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

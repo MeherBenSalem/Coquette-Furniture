@@ -1,0 +1,83 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/top"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/skirt"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/skirt",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/skirt",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/skirt",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/leg"
+      }
+    },
+    {
+      "when": {
+        "north": "false",
+        "east": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/leg",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "false",
+        "east": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/leg",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "false",
+        "west": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/dining_table/baby_blue/leg",
+        "y": 270
+      }
+    }
+  ]
+}

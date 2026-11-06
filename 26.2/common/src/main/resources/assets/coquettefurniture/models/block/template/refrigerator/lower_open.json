@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "baby_blue_cap": "coquettefurniture:block/baby_blue/paint",
     "cherry": "coquettefurniture:block/cherry",

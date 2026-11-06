@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:dresser",
+  "pattern": [
+    "PPP",
+    "PCP",
+    "PDP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "C": "minecraft:chest",
+    "D": "minecraft:light_blue_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_dresser"
+  },
+  "show_notification": false
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "coquettefurniture:block/template/canopy_bed/item",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_blue/bow",
+    "fabric": "coquettefurniture:block/baby_blue/fabric",
+    "paint": "coquettefurniture:block/baby_blue/paint",
+    "print": "coquettefurniture:block/baby_blue/print",
+    "quilt": "coquettefurniture:block/baby_blue/quilt",
+    "sheer": "coquettefurniture:block/baby_blue/sheer",
+    "trim": "coquettefurniture:block/baby_blue/trim",
+    "particle": "coquettefurniture:block/baby_blue/paint"
+  }
+}

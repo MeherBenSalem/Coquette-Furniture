@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/standing_mirror/lower",
-  "render_type": "minecraft:cutout",
   "textures": {
     "paint": "coquettefurniture:block/lavender/paint",
     "particle": "coquettefurniture:block/lavender/paint"

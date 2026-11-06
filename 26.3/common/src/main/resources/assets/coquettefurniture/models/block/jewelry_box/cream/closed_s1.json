@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/jewelry_box/closed_s1",
+  "textures": {
+    "bow": "coquettefurniture:block/cream/bow",
+    "paint": "coquettefurniture:block/cream/paint",
+    "quilt": "coquettefurniture:block/cream/quilt",
+    "particle": "coquettefurniture:block/cream/paint"
+  }
+}

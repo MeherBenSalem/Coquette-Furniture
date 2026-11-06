@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/plant/potted_monstera"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/plant/potted_monstera",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/plant/potted_monstera",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/plant/potted_monstera",
+      "y": 270
+    }
+  }
+}

@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/bathroom_sink/on",
-  "render_type": "minecraft:cutout",
   "textures": {
     "ceramic": "coquettefurniture:block/cream/ceramic",
     "particle": "coquettefurniture:block/cream/ceramic"

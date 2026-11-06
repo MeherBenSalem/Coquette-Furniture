@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/standing_mirror/upper",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bow": "coquettefurniture:block/mint/bow",
     "paint": "coquettefurniture:block/mint/paint",

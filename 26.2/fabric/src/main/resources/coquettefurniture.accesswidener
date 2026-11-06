@@ -1,1 +1,3 @@
 accessWidener v2 official
+# lets the catalog hand its 3D preview (a picture-in-picture render state) to the GUI renderer
+accessible field net/minecraft/client/gui/GuiGraphicsExtractor guiRenderState Lnet/minecraft/client/renderer/state/gui/GuiRenderState;

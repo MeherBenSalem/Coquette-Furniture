@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/outdoor_table/main",
+  "textures": {
+    "paint": "coquettefurniture:block/white/paint",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

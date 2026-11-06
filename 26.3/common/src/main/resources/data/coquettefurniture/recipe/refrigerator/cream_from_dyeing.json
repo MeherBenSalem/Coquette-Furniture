@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:refrigerator",
+    "minecraft:yellow_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_refrigerator"
+  },
+  "group": "coquettefurniture:dye_refrigerator"
+}

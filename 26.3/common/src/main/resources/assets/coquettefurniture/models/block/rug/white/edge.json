@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/rug/edge",
+  "textures": {
+    "rug_edge": "coquettefurniture:block/white/rug_edge",
+    "particle": "coquettefurniture:block/white/rug"
+  }
+}

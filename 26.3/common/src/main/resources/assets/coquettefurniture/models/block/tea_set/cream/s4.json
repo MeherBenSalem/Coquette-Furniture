@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/tea_set/s4",
+  "textures": {
+    "bow": "coquettefurniture:block/cream/bow",
+    "ceramic": "coquettefurniture:block/cream/ceramic",
+    "particle": "coquettefurniture:block/cream/ceramic"
+  }
+}

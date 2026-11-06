@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/dining_table/leg",
-  "render_type": "minecraft:cutout",
   "textures": {
     "paint": "coquettefurniture:block/baby_pink/paint",
     "trim": "coquettefurniture:block/baby_pink/trim",

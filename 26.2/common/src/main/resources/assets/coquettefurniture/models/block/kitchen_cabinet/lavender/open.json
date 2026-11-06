@@ -1,6 +1,5 @@
 {
   "parent": "coquettefurniture:block/template/kitchen_cabinet/open",
-  "render_type": "minecraft:cutout",
   "textures": {
     "ceramic": "coquettefurniture:block/lavender/ceramic",
     "paint": "coquettefurniture:block/lavender/paint",

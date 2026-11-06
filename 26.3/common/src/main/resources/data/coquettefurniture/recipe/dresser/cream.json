@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:dresser",
+  "pattern": [
+    "PPP",
+    "PCP",
+    "PDP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "C": "minecraft:chest",
+    "D": "minecraft:yellow_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_dresser"
+  },
+  "show_notification": false
+}

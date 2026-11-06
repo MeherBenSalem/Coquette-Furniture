@@ -1,6 +1,5 @@
 {
   "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
   "textures": {
     "frosting_lavender": "coquettefurniture:block/frosting_lavender",
     "frosting_pink": "coquettefurniture:block/frosting_pink",

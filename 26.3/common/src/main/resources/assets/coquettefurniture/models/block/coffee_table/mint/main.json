@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/coffee_table/main",
+  "textures": {
+    "ceramic": "coquettefurniture:block/mint/ceramic",
+    "paint": "coquettefurniture:block/mint/paint",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

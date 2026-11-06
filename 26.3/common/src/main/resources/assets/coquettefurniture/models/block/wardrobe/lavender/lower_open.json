@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/wardrobe/lower_open",
+  "textures": {
+    "fabric": "coquettefurniture:block/lavender/fabric",
+    "paint": "coquettefurniture:block/lavender/paint",
+    "panel": "coquettefurniture:block/lavender/panel",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

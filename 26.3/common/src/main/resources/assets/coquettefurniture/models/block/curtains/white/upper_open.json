@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/curtains/upper_open",
+  "textures": {
+    "bow": "coquettefurniture:block/white/bow",
+    "fabric": "coquettefurniture:block/white/fabric",
+    "print": "coquettefurniture:block/white/print",
+    "particle": "coquettefurniture:block/white/fabric"
+  }
+}

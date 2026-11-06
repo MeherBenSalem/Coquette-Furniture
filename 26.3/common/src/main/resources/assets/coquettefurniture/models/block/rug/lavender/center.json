@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/rug/center",
+  "textures": {
+    "rug": "coquettefurniture:block/lavender/rug",
+    "particle": "coquettefurniture:block/lavender/rug"
+  }
+}
