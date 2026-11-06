@@ -1,6 +1,6 @@
 # Coquette Furniture 🎀
 
-*A Sugarplum Studios mod for Minecraft Java 1.20.1 (Forge 47.x)*
+*A Sugarplum Studios mod for Minecraft Java 1.20.1, 1.21.1, 26.2 and 26.3, on Forge, Fabric and NeoForge*
 
 Dream bedrooms and pastel home decor. **37 pieces of furniture in six colourways**
 (Baby Pink, White, Cream, Lavender, Mint, Baby Blue), **4 potted plants** and
@@ -11,19 +11,17 @@ up, light candles, play music or get pampered.
 
 ---
 
-## Building
+## Installing
 
-| Command | What it does |
-|---|---|
-| `python tools/generate_assets.py` | Regenerates every texture, model, blockstate, item model, loot table, recipe, tag and the language file, then checks every reference. |
-| `./gradlew build` | Builds the mod jar: `build/libs/coquettefurniture-1.20.1-1.0.0.jar`. |
-| `./gradlew runClient` | Starts a development client with the mod. |
-| `./gradlew runGameTestServer` | Runs the 14 automated in-game tests and exits (non-zero on failure). |
-| `./gradlew runClient -Pshowcase` | Builds a furnished showcase world, screenshots every room and the catalog into `run/screenshots/`, then quits. Development only; it is left out of the jar. |
-| `python tools/preview_models.py out.png <model>...` | Renders models to an isometric preview sheet without starting Minecraft. |
-| `python tools/make_logo.py` | Rebuilds the mod-list logo from real furniture renders. |
+| Minecraft | Loaders | Java | Also install |
+|---|---|---|---|
+| 1.20.1 | Forge (47+), Fabric | 17+ | Fabric API on Fabric |
+| 1.21.1 | NeoForge (21.1+), Fabric | 21+ | Fabric API on Fabric |
+| 26.2 | NeoForge, Fabric | 25+ | Fabric API on Fabric |
+| 26.3 | NeoForge, Fabric | 25+ | Fabric API on Fabric |
 
-Requires Java 17 (Minecraft 1.20.1's runtime) and Python 3.8+ for the asset tools (no extra packages).
+Put the jar for your loader and version (`coquettefurniture-<loader>-<minecraft>-1.0.0.jar`) in your `mods` folder, on the
+server and on every client. The release jars are in `release/1.0.0/`.
 
 ---
 
@@ -140,7 +138,7 @@ spinning display cabinet items.
 
 ## In-game testing guide
 
-Start with `./gradlew runClient`, then create a **Creative** world (flat is easiest) with cheats on.
+Start with `cd 1.20.1 && ./gradlew :forge:runClient` (or `:fabric:runClient`; any other workspace works the same way), then create a **Creative** world (flat is easiest) with cheats on.
 Each step lists what you should see.
 
 ### 1. Catalog & sets
@@ -211,6 +209,34 @@ Each step lists what you should see.
 4. Place furniture under water. → It's waterlogged.
 
 ### 8. Automated checks
-`./gradlew runGameTestServer`: 14 tests covering recipes and loot for all 239 blocks, sitting, sofa/table/rug
+`cd 1.20.1 && ./gradlew :forge:runGameTestServer`: 14 tests covering recipes and loot for all 239 blocks, sitting, sofa/table/rug
 joining, decoration sinking, pillows, sinks, bathtubs, recolouring with contents, storage sizes and open
 models, beds, stove cooking, lamps/candles/curtains and the display cabinet.
+
+---
+
+## For developers
+
+The repository holds one MultiLoader workspace per Minecraft version, laid out like the other Sugarplum Studios mods:
+`1.20.1/` (common, fabric, forge), and `1.21.1/`, `26.2/` and `26.3/` (common, fabric, neoforge). `common` holds all
+gameplay, rendering and data and compiles against vanilla Minecraft only; the loader modules are thin layers
+(registration, networking, events, key binding, renderers, render layers) behind `platform.IPlatform`.
+
+| Command | What it does |
+|---|---|
+| `cd 1.20.1 && ./gradlew build` | Builds `forge/build/libs` and `fabric/build/libs` (Java 17) |
+| `cd 1.21.1 && ./gradlew build` | Builds `neoforge/build/libs` and `fabric/build/libs` (Java 21) |
+| `cd 26.2 && ./gradlew build` | Same for 26.2 (Java 25); `26.3` likewise |
+| `./gradlew :fabric:runClient` | A development client (also `:forge:` / `:neoforge:`) |
+| `./gradlew :forge:runGameTestServer` | 1.20.1: the 14 GameTests, headless |
+| `./gradlew :forge:runClient -Pshowcase` | Builds a furnished world, screenshots every room and the catalog into `run/screenshots/`, then quits (every loader) |
+| `./gradlew :forge:runClient -Pmarketing` | 1.20.1: the 1920×1080 listing captures (see `marketing/README.md`) |
+| `tools/devtest.sh <version> <loader>` | Load test: starts the dev server and the showcase client, then prints any errors in their logs |
+| `python tools/generate_assets.py` | Regenerates every texture, model, blockstate, item model, loot table, recipe, tag and the language file into `1.20.1/common/src/main/resources`, then checks every reference |
+| `python tools/port_data.py <version>` | Derives the `1.21.1`, `26.2` or `26.3` resources from the 1.20.1 ones (1.21 folder names, recipe and loot formats, item model definitions) |
+| `python tools/preview_models.py out.png <model>...` | Renders models to an isometric preview sheet without starting Minecraft |
+| `python tools/make_logo.py` | Rebuilds the mod-list logo from real furniture renders |
+
+The Python tools need Python 3.8+ and no extra packages. Config files are read by a small TOML reader in `common`
+(`config/TomlConfig.java`), so `coquettefurniture-common.toml` and `coquettefurniture-client.toml` have the same layout
+and keys on every loader and version.

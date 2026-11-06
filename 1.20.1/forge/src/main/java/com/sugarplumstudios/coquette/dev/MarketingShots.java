@@ -111,6 +111,10 @@ public final class MarketingShots {
         Shot shot = SHOTS.get(shotIndex);
         if (phase == 0) {
             mc.setScreen(null);
+            if (mc.options.guiScale().get() != 3) {
+                mc.options.guiScale().set(3);
+                mc.resizeDisplay();
+            }
             mc.options.hideGui = true;
             mc.options.setCameraType(CameraType.FIRST_PERSON);
             ServerLevel level = mc.getSingleplayerServer().overworld();
@@ -229,7 +233,7 @@ public final class MarketingShots {
 
     /** The default room camera: south-east of the room, looking north-west into it. */
     private static void roomShot(String name, int x0, int z0, long time) {
-        SHOTS.add(new Shot(name, x0 + 12.6, Y + 5.6, z0 + 11.4, 140, 27, time, mc -> {
+        SHOTS.add(new Shot(name, x0 + 8.1, Y + 3.3, z0 + 7.0, 142, 24, time, mc -> {
         }));
     }
 
@@ -254,22 +258,25 @@ public final class MarketingShots {
         }));
         SHOTS.add(new Shot("decor", 40 + 5.5, Y + 2.0, 5.4, 180, 30, 6000, mc -> {
         }));
-        SHOTS.add(new Shot("night", 12.6, Y + 5.6, 11.4, 140, 27, 18000, mc -> {
+        SHOTS.add(new Shot("night", 7.6, Y + 2.6, 5.6, 150, 20, 18000, mc -> {
         }));
-        SHOTS.add(new Shot("catalog", 12.6, Y + 5.6, 11.4, 140, 27, 6000, mc -> {
-            mc.options.hideGui = false;
+        SHOTS.add(new Shot("catalog", 7.5, Y + 2.2, 5.5, 150, 15, 6000, mc -> {
+            mc.options.guiScale().set(4);
+            mc.resizeDisplay();
             CatalogScreen screen = new CatalogScreen();
             mc.setScreen(screen);
             screen.previewSelect(1, ModItems.furniture(FurnitureType.CANOPY_BED, FurnitureColor.BABY_PINK));
         }));
-        SHOTS.add(new Shot("catalog-kitchen", 80 + 12.6, Y + 5.6, 11.4, 140, 27, 6000, mc -> {
-            mc.options.hideGui = false;
+        SHOTS.add(new Shot("catalog-kitchen", 80 + 7.5, Y + 2.2, 5.5, 150, 15, 6000, mc -> {
+            mc.options.guiScale().set(4);
+            mc.resizeDisplay();
             CatalogScreen screen = new CatalogScreen();
             mc.setScreen(screen);
             screen.previewSelect(3, ModItems.furniture(FurnitureType.STOVE, FurnitureColor.MINT));
         }));
-        SHOTS.add(new Shot("catalog-sets", 40 + 12.6, Y + 5.6, 11.4, 140, 27, 6000, mc -> {
-            mc.options.hideGui = false;
+        SHOTS.add(new Shot("catalog-sets", 40 + 7.5, Y + 2.2, 5.5, 150, 15, 6000, mc -> {
+            mc.options.guiScale().set(4);
+            mc.resizeDisplay();
             CatalogScreen screen = new CatalogScreen();
             mc.setScreen(screen);
             screen.previewSet(0);
@@ -315,8 +322,8 @@ public final class MarketingShots {
 
     /** Angelcore Room: a white and baby blue living room. */
     private static void angelcoreLivingRoom(ServerLevel level, int x0, int z0) {
-        room(level, x0, z0, Blocks.BIRCH_PLANKS.defaultBlockState(), Blocks.LIGHT_BLUE_WOOL.defaultBlockState(),
-                Blocks.WHITE_WOOL.defaultBlockState(), 4);
+        room(level, x0, z0, Blocks.BIRCH_PLANKS.defaultBlockState(), Blocks.WHITE_WOOL.defaultBlockState(),
+                Blocks.WHITE_CONCRETE.defaultBlockState(), 4);
         int y = Y;
         for (int x = x0 + 3; x <= x0 + 6; x++) {
             put(level, x, y, z0, f(FurnitureType.SOFA, FurnitureColor.BABY_BLUE, S));
@@ -359,9 +366,14 @@ public final class MarketingShots {
 
     /** Pastel Kitchen. */
     private static void pastelKitchen(ServerLevel level, int x0, int z0) {
-        room(level, x0, z0, Blocks.SMOOTH_QUARTZ.defaultBlockState(), Blocks.LIME_WOOL.defaultBlockState(),
-                Blocks.WHITE_WOOL.defaultBlockState(), 4);
-        fill(level, x0, Y - 1, z0, x0 + 10, Y - 1, z0 + 7, Blocks.WHITE_GLAZED_TERRACOTTA.defaultBlockState());
+        room(level, x0, z0, Blocks.SMOOTH_QUARTZ.defaultBlockState(), Blocks.WHITE_WOOL.defaultBlockState(),
+                Blocks.OXIDIZED_CUT_COPPER.defaultBlockState(), 4);
+        for (int x = x0; x <= x0 + 10; x++) {
+            for (int z = z0; z <= z0 + 7; z++) {
+                level.setBlock(new BlockPos(x, Y - 1, z), ((x + z) & 1) == 0 ? Blocks.WHITE_CONCRETE.defaultBlockState()
+                        : Blocks.PINK_WOOL.defaultBlockState(), Block.UPDATE_CLIENTS);
+            }
+        }
         int y = Y;
         tall(level, x0, y, z0, f(FurnitureType.REFRIGERATOR, FurnitureColor.MINT, S));
         tall(level, x0 + 1, y, z0, f(FurnitureType.REFRIGERATOR, FurnitureColor.MINT, S).setValue(StorageBlock.OPEN, true));
@@ -401,7 +413,7 @@ public final class MarketingShots {
 
     /** Lavender Dreams: a lavender bedroom with a bathroom corner. */
     private static void lavenderDreams(ServerLevel level, int x0, int z0) {
-        room(level, x0, z0, Blocks.BIRCH_PLANKS.defaultBlockState(), Blocks.PURPLE_WOOL.defaultBlockState(),
+        room(level, x0, z0, Blocks.BIRCH_PLANKS.defaultBlockState(), Blocks.PURPUR_BLOCK.defaultBlockState(),
                 Blocks.WHITE_WOOL.defaultBlockState(), 2);
         fill(level, x0 + 6, Y - 1, z0, x0 + 10, Y - 1, z0 + 7, Blocks.CALCITE.defaultBlockState());
         fill(level, x0 + 6, Y, z0 - 1, x0 + 10, Y + 4, z0 - 1, Blocks.WHITE_WOOL.defaultBlockState());
@@ -488,7 +500,7 @@ public final class MarketingShots {
                 put(level, x, Y, z0 + 2 + j * 2, f(row[j], colors[i], S));
             }
         }
-        SHOTS.add(new Shot("colours", x0 + 5, Y + 7.5, z0 + 17, 180, 34, 6000, mc -> {
+        SHOTS.add(new Shot("colours", x0 + 5, Y + 4.4, z0 + 12.2, 180, 29, 6000, mc -> {
         }));
     }
 
