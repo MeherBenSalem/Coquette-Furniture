@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:bathroom_cabinet"
+    },
+    {
+      "item": "minecraft:yellow_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:cream_bathroom_cabinet",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_bathroom_cabinet"
+}

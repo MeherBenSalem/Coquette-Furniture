@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:dresser",
+  "pattern": [
+    "PPP",
+    "PCP",
+    "PDP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "D": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:lavender_dresser",
+    "count": 1
+  },
+  "show_notification": false
+}

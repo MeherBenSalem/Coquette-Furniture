@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SES",
+    "QgQ"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "g": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:cupcake_stand",
+    "count": 1
+  },
+  "show_notification": false
+}

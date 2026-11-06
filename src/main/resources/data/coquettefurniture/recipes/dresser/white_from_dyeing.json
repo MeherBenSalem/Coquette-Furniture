@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:dresser"
+    },
+    {
+      "item": "minecraft:white_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:white_dresser",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_dresser"
+}

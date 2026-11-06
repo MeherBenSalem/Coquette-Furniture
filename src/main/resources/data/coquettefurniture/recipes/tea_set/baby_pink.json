@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:tea_set",
+  "pattern": [
+    "KDK",
+    "gKg"
+  ],
+  "key": {
+    "K": {
+      "item": "minecraft:clay_ball"
+    },
+    "g": {
+      "item": "minecraft:gold_nugget"
+    },
+    "D": {
+      "item": "minecraft:pink_dye"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:baby_pink_tea_set",
+    "count": 1
+  },
+  "show_notification": false
+}

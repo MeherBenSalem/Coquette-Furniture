@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:canopy_bed"
+    },
+    {
+      "item": "minecraft:pink_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:baby_pink_canopy_bed",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_canopy_bed"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:curtains",
+  "pattern": [
+    "SSS",
+    "WDW",
+    "W W"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "D": {
+      "item": "minecraft:light_blue_dye"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:baby_blue_curtains",
+    "count": 1
+  },
+  "show_notification": false
+}

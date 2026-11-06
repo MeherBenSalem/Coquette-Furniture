@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:bathroom_sink"
+    },
+    {
+      "item": "minecraft:pink_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:baby_pink_bathroom_sink",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_bathroom_sink"
+}

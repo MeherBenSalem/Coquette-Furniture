@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:bathroom_sink",
+  "pattern": [
+    "QDQ",
+    " Q ",
+    " Q "
+  ],
+  "key": {
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "D": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:cream_bathroom_sink",
+    "count": 1
+  },
+  "show_notification": false
+}

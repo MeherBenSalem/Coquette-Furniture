@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/soap_dispenser/s1",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/mint/bow",
+    "ceramic": "coquettefurniture:block/mint/ceramic",
+    "panel": "coquettefurniture:block/mint/panel",
+    "particle": "coquettefurniture:block/mint/ceramic"
+  }
+}

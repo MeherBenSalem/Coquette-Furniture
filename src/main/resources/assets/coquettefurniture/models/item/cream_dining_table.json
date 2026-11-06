@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/dining_table/item",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/cream/paint",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/paint"
+  }
+}

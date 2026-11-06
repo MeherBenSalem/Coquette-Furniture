@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,half=lower": {
+      "model": "coquettefurniture:block/swing_seat/lavender/lower"
+    },
+    "facing=north,half=upper": {
+      "model": "coquettefurniture:block/swing_seat/lavender/upper"
+    },
+    "facing=east,half=lower": {
+      "model": "coquettefurniture:block/swing_seat/lavender/lower",
+      "y": 90
+    },
+    "facing=east,half=upper": {
+      "model": "coquettefurniture:block/swing_seat/lavender/upper",
+      "y": 90
+    },
+    "facing=south,half=lower": {
+      "model": "coquettefurniture:block/swing_seat/lavender/lower",
+      "y": 180
+    },
+    "facing=south,half=upper": {
+      "model": "coquettefurniture:block/swing_seat/lavender/upper",
+      "y": 180
+    },
+    "facing=west,half=lower": {
+      "model": "coquettefurniture:block/swing_seat/lavender/lower",
+      "y": 270
+    },
+    "facing=west,half=upper": {
+      "model": "coquettefurniture:block/swing_seat/lavender/upper",
+      "y": 270
+    }
+  }
+}

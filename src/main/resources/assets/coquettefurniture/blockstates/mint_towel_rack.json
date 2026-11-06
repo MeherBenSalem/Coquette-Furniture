@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/towel_rack/mint/main"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/towel_rack/mint/main",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/towel_rack/mint/main",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/towel_rack/mint/main",
+      "y": 270
+    }
+  }
+}

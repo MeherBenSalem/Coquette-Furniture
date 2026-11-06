@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/tea_set/s3",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/white/bow",
+    "ceramic": "coquettefurniture:block/white/ceramic",
+    "particle": "coquettefurniture:block/white/ceramic"
+  }
+}

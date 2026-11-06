@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:rug",
+  "pattern": [
+    "CDC"
+  ],
+  "key": {
+    "C": {
+      "tag": "minecraft:wool_carpets"
+    },
+    "D": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:cream_rug",
+    "count": 2
+  },
+  "show_notification": false
+}

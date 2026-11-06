@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:swing_seat"
+    },
+    {
+      "item": "minecraft:yellow_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:cream_swing_seat",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_swing_seat"
+}

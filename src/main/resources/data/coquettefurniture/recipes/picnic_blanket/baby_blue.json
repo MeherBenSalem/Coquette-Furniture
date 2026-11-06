@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:picnic_blanket",
+  "pattern": [
+    "CWC",
+    "CDC"
+  ],
+  "key": {
+    "C": {
+      "tag": "minecraft:wool_carpets"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "D": {
+      "item": "minecraft:light_blue_dye"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:baby_blue_picnic_blanket",
+    "count": 2
+  },
+  "show_notification": false
+}

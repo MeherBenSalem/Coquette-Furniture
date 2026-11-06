@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/towel_rack/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/white/bow",
+    "fabric": "coquettefurniture:block/white/fabric",
+    "stripe": "coquettefurniture:block/white/stripe",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/fabric"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "variants": {
+    "facing=north,open=false,sink=0": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s0"
+    },
+    "facing=north,open=false,sink=1": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s1"
+    },
+    "facing=north,open=false,sink=2": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s2"
+    },
+    "facing=north,open=false,sink=3": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s3"
+    },
+    "facing=north,open=false,sink=4": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s4"
+    },
+    "facing=north,open=true,sink=0": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s0"
+    },
+    "facing=north,open=true,sink=1": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s1"
+    },
+    "facing=north,open=true,sink=2": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s2"
+    },
+    "facing=north,open=true,sink=3": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s3"
+    },
+    "facing=north,open=true,sink=4": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s4"
+    },
+    "facing=east,open=false,sink=0": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s0",
+      "y": 90
+    },
+    "facing=east,open=false,sink=1": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s1",
+      "y": 90
+    },
+    "facing=east,open=false,sink=2": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s2",
+      "y": 90
+    },
+    "facing=east,open=false,sink=3": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s3",
+      "y": 90
+    },
+    "facing=east,open=false,sink=4": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s4",
+      "y": 90
+    },
+    "facing=east,open=true,sink=0": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s0",
+      "y": 90
+    },
+    "facing=east,open=true,sink=1": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s1",
+      "y": 90
+    },
+    "facing=east,open=true,sink=2": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s2",
+      "y": 90
+    },
+    "facing=east,open=true,sink=3": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s3",
+      "y": 90
+    },
+    "facing=east,open=true,sink=4": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s4",
+      "y": 90
+    },
+    "facing=south,open=false,sink=0": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s0",
+      "y": 180
+    },
+    "facing=south,open=false,sink=1": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s1",
+      "y": 180
+    },
+    "facing=south,open=false,sink=2": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s2",
+      "y": 180
+    },
+    "facing=south,open=false,sink=3": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s3",
+      "y": 180
+    },
+    "facing=south,open=false,sink=4": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s4",
+      "y": 180
+    },
+    "facing=south,open=true,sink=0": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s0",
+      "y": 180
+    },
+    "facing=south,open=true,sink=1": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s1",
+      "y": 180
+    },
+    "facing=south,open=true,sink=2": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s2",
+      "y": 180
+    },
+    "facing=south,open=true,sink=3": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s3",
+      "y": 180
+    },
+    "facing=south,open=true,sink=4": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s4",
+      "y": 180
+    },
+    "facing=west,open=false,sink=0": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s0",
+      "y": 270
+    },
+    "facing=west,open=false,sink=1": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s1",
+      "y": 270
+    },
+    "facing=west,open=false,sink=2": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s2",
+      "y": 270
+    },
+    "facing=west,open=false,sink=3": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s3",
+      "y": 270
+    },
+    "facing=west,open=false,sink=4": {
+      "model": "coquettefurniture:block/jewelry_box/white/closed_s4",
+      "y": 270
+    },
+    "facing=west,open=true,sink=0": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s0",
+      "y": 270
+    },
+    "facing=west,open=true,sink=1": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s1",
+      "y": 270
+    },
+    "facing=west,open=true,sink=2": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s2",
+      "y": 270
+    },
+    "facing=west,open=true,sink=3": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s3",
+      "y": 270
+    },
+    "facing=west,open=true,sink=4": {
+      "model": "coquettefurniture:block/jewelry_box/white/open_s4",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:bedside_table"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:lavender_bedside_table",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_bedside_table"
+}

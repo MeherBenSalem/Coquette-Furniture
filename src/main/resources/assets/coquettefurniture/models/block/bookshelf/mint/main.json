@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/bookshelf/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "ceramic": "coquettefurniture:block/mint/ceramic",
+    "paint": "coquettefurniture:block/mint/paint",
+    "print": "coquettefurniture:block/mint/print",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

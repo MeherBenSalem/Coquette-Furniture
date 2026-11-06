@@ -1,0 +1,13 @@
+{
+  "parent": "coquettefurniture:block/template/canopy_bed/foot",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/white/bow",
+    "paint": "coquettefurniture:block/white/paint",
+    "print": "coquettefurniture:block/white/print",
+    "quilt": "coquettefurniture:block/white/quilt",
+    "sheer": "coquettefurniture:block/white/sheer",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

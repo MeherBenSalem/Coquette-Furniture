@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "R",
+    "Q"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:rose_bush"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:rose_vase",
+    "count": 1
+  },
+  "show_notification": false
+}

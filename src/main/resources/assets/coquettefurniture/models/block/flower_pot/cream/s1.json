@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/flower_pot/s1",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "ceramic": "coquettefurniture:block/cream/ceramic",
+    "particle": "coquettefurniture:block/cream/ceramic"
+  }
+}

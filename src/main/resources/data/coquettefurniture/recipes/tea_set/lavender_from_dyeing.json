@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:tea_set"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:lavender_tea_set",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_tea_set"
+}

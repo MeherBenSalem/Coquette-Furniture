@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:wall_mirror"
+    },
+    {
+      "item": "minecraft:lime_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:mint_wall_mirror",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_wall_mirror"
+}

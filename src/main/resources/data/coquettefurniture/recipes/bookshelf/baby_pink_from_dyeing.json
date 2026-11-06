@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:bookshelf"
+    },
+    {
+      "item": "minecraft:pink_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:baby_pink_bookshelf",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_bookshelf"
+}

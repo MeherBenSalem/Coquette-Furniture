@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:kitchen_cabinet"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:lavender_kitchen_cabinet",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_kitchen_cabinet"
+}

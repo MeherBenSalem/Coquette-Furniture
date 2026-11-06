@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:dining_chair"
+    },
+    {
+      "item": "minecraft:yellow_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:cream_dining_chair",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_dining_chair"
+}

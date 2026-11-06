@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:standing_mirror",
+  "pattern": [
+    "SMS",
+    "SMS",
+    "SDS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "M": {
+      "item": "minecraft:glass_pane"
+    },
+    "D": {
+      "item": "minecraft:pink_dye"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:baby_pink_standing_mirror",
+    "count": 1
+  },
+  "show_notification": false
+}

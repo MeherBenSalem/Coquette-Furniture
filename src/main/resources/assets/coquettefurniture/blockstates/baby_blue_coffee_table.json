@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/coffee_table/baby_blue/main"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/coffee_table/baby_blue/main",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/coffee_table/baby_blue/main",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/coffee_table/baby_blue/main",
+      "y": 270
+    }
+  }
+}

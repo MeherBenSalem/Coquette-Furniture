@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:towel_rack"
+    },
+    {
+      "item": "minecraft:yellow_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:cream_towel_rack",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_towel_rack"
+}

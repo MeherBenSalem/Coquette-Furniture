@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/coffee_table/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "ceramic": "coquettefurniture:block/mint/ceramic",
+    "paint": "coquettefurniture:block/mint/paint",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

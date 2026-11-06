@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:flower_pot"
+    },
+    {
+      "item": "minecraft:light_blue_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:baby_blue_flower_pot",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_flower_pot"
+}

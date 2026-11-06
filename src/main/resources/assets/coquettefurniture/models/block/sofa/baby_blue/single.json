@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/sofa/single",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "fabric": "coquettefurniture:block/baby_blue/fabric",
+    "print": "coquettefurniture:block/baby_blue/print",
+    "quilt": "coquettefurniture:block/baby_blue/quilt",
+    "trim": "coquettefurniture:block/baby_blue/trim",
+    "particle": "coquettefurniture:block/baby_blue/fabric"
+  }
+}

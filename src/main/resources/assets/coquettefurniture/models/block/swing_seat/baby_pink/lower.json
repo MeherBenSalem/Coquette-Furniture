@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/swing_seat/lower",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "fabric": "coquettefurniture:block/baby_pink/fabric",
+    "paint": "coquettefurniture:block/baby_pink/paint",
+    "print": "coquettefurniture:block/baby_pink/print",
+    "quilt": "coquettefurniture:block/baby_pink/quilt",
+    "particle": "coquettefurniture:block/baby_pink/paint"
+  }
+}

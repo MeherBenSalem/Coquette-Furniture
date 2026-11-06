@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/bathtub/foot_filled",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_blue/bow",
+    "ceramic": "coquettefurniture:block/baby_blue/ceramic",
+    "particle": "coquettefurniture:block/baby_blue/ceramic"
+  }
+}

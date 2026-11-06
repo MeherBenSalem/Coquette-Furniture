@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:swing_seat",
+  "pattern": [
+    "T T",
+    "T T",
+    "PDP"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:string"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "D": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "item": "coquettefurniture:lavender_swing_seat",
+    "count": 1
+  },
+  "show_notification": false
+}

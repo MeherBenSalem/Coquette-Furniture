@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:birdhouse"
+    },
+    {
+      "item": "minecraft:lime_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:mint_birdhouse",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_birdhouse"
+}

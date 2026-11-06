@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,half=lower,open=false": {
+      "model": "coquettefurniture:block/curtains/white/lower"
+    },
+    "facing=north,half=lower,open=true": {
+      "model": "coquettefurniture:block/curtains/white/lower_open"
+    },
+    "facing=north,half=upper,open=false": {
+      "model": "coquettefurniture:block/curtains/white/upper"
+    },
+    "facing=north,half=upper,open=true": {
+      "model": "coquettefurniture:block/curtains/white/upper_open"
+    },
+    "facing=east,half=lower,open=false": {
+      "model": "coquettefurniture:block/curtains/white/lower",
+      "y": 90
+    },
+    "facing=east,half=lower,open=true": {
+      "model": "coquettefurniture:block/curtains/white/lower_open",
+      "y": 90
+    },
+    "facing=east,half=upper,open=false": {
+      "model": "coquettefurniture:block/curtains/white/upper",
+      "y": 90
+    },
+    "facing=east,half=upper,open=true": {
+      "model": "coquettefurniture:block/curtains/white/upper_open",
+      "y": 90
+    },
+    "facing=south,half=lower,open=false": {
+      "model": "coquettefurniture:block/curtains/white/lower",
+      "y": 180
+    },
+    "facing=south,half=lower,open=true": {
+      "model": "coquettefurniture:block/curtains/white/lower_open",
+      "y": 180
+    },
+    "facing=south,half=upper,open=false": {
+      "model": "coquettefurniture:block/curtains/white/upper",
+      "y": 180
+    },
+    "facing=south,half=upper,open=true": {
+      "model": "coquettefurniture:block/curtains/white/upper_open",
+      "y": 180
+    },
+    "facing=west,half=lower,open=false": {
+      "model": "coquettefurniture:block/curtains/white/lower",
+      "y": 270
+    },
+    "facing=west,half=lower,open=true": {
+      "model": "coquettefurniture:block/curtains/white/lower_open",
+      "y": 270
+    },
+    "facing=west,half=upper,open=false": {
+      "model": "coquettefurniture:block/curtains/white/upper",
+      "y": 270
+    },
+    "facing=west,half=upper,open=true": {
+      "model": "coquettefurniture:block/curtains/white/upper_open",
+      "y": 270
+    }
+  }
+}

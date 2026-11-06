@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/birdhouse/lavender/main"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/birdhouse/lavender/main",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/birdhouse/lavender/main",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/birdhouse/lavender/main",
+      "y": 270
+    }
+  }
+}

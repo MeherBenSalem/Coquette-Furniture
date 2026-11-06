@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/wardrobe/lower_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "fabric": "coquettefurniture:block/mint/fabric",
+    "paint": "coquettefurniture:block/mint/paint",
+    "panel": "coquettefurniture:block/mint/panel",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

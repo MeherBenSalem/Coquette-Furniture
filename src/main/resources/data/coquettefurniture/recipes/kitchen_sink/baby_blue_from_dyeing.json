@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:kitchen_sink"
+    },
+    {
+      "item": "minecraft:light_blue_dye"
+    }
+  ],
+  "result": {
+    "item": "coquettefurniture:baby_blue_kitchen_sink",
+    "count": 1
+  },
+  "group": "coquettefurniture:dye_kitchen_sink"
+}

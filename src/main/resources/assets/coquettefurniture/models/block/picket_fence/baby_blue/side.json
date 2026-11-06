@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/picket_fence/side",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/baby_blue/paint",
+    "trim": "coquettefurniture:block/baby_blue/trim",
+    "particle": "coquettefurniture:block/baby_blue/paint"
+  }
+}

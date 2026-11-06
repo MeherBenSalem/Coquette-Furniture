@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/display_cabinet/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/white/paint",
+    "panel": "coquettefurniture:block/white/panel",
+    "print": "coquettefurniture:block/white/print",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}
