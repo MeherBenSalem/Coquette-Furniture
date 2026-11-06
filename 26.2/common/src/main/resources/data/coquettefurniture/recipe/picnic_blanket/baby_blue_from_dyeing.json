@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:picnic_blanket",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_picnic_blanket"
+  },
+  "group": "coquettefurniture:dye_picnic_blanket"
+}

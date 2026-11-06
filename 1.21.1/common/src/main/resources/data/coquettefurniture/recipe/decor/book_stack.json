@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "BB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:book_stack"
+  },
+  "show_notification": false
+}

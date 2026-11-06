@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/decorative_pillow/p1_s3",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "fabric": "coquettefurniture:block/mint/fabric",
+    "quilt": "coquettefurniture:block/mint/quilt",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/fabric"
+  }
+}

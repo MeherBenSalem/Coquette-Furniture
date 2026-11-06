@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:bedside_table"
+    },
+    {
+      "item": "minecraft:light_blue_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_bedside_table"
+  },
+  "group": "coquettefurniture:dye_bedside_table"
+}

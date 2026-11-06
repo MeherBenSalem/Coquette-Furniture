@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:bathtub",
+  "pattern": [
+    "Q Q",
+    "QDQ",
+    "QQQ"
+  ],
+  "key": {
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "D": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_bathtub"
+  },
+  "show_notification": false
+}

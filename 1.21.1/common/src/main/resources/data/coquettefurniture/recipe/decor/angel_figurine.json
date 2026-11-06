@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " g ",
+    "FQF",
+    " Q "
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:gold_nugget"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:angel_figurine"
+  },
+  "show_notification": false
+}

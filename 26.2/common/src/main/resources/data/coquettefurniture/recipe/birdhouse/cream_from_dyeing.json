@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:birdhouse",
+    "minecraft:yellow_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_birdhouse"
+  },
+  "group": "coquettefurniture:dye_birdhouse"
+}

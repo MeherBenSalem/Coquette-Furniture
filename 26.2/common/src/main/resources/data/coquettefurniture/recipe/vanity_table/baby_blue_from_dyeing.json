@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:vanity_table",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_vanity_table"
+  },
+  "group": "coquettefurniture:dye_vanity_table"
+}

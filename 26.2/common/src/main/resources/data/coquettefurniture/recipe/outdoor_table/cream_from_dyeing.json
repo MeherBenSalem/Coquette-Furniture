@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:outdoor_table",
+    "minecraft:yellow_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_outdoor_table"
+  },
+  "group": "coquettefurniture:dye_outdoor_table"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:flower_pot",
+  "pattern": [
+    "fff",
+    "KDK",
+    " K "
+  ],
+  "key": {
+    "f": {
+      "tag": "minecraft:small_flowers"
+    },
+    "K": {
+      "item": "minecraft:clay_ball"
+    },
+    "D": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_flower_pot"
+  },
+  "show_notification": false
+}

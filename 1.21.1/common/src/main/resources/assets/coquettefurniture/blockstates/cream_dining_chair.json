@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/dining_chair/cream/main"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/dining_chair/cream/main",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/dining_chair/cream/main",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/dining_chair/cream/main",
+      "y": 270
+    }
+  }
+}

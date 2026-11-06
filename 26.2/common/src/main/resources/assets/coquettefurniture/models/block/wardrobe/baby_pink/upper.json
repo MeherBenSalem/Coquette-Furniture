@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/wardrobe/upper",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_pink/bow",
+    "paint": "coquettefurniture:block/baby_pink/paint",
+    "panel": "coquettefurniture:block/baby_pink/panel",
+    "trim": "coquettefurniture:block/baby_pink/trim",
+    "particle": "coquettefurniture:block/baby_pink/paint"
+  }
+}

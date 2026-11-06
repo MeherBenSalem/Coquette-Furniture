@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "R",
+    "F"
+  ],
+  "key": {
+    "R": "minecraft:rose_bush",
+    "F": "minecraft:flower_pot"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:potted_rose_bush"
+  },
+  "show_notification": false
+}

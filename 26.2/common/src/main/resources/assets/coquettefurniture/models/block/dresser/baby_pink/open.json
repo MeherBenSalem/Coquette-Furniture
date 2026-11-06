@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/dresser/open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "lining": "coquettefurniture:block/baby_pink/lining",
+    "paint": "coquettefurniture:block/baby_pink/paint",
+    "panel": "coquettefurniture:block/baby_pink/panel",
+    "trim": "coquettefurniture:block/baby_pink/trim",
+    "particle": "coquettefurniture:block/baby_pink/paint"
+  }
+}

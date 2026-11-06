@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:bathtub",
+  "pattern": [
+    "Q Q",
+    "QDQ",
+    "QQQ"
+  ],
+  "key": {
+    "Q": "minecraft:quartz",
+    "D": "minecraft:pink_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_pink_bathtub"
+  },
+  "show_notification": false
+}

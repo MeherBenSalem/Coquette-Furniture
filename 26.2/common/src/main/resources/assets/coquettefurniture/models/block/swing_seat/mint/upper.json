@@ -1,0 +1,7 @@
+{
+  "parent": "coquettefurniture:block/template/swing_seat/upper",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

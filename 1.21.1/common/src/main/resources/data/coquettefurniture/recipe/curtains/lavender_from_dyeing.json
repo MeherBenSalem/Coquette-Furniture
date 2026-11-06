@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:curtains"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_curtains"
+  },
+  "group": "coquettefurniture:dye_curtains"
+}

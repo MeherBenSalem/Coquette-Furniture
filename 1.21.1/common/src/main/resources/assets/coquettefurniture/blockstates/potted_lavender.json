@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/plant/potted_lavender"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/plant/potted_lavender",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/plant/potted_lavender",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/plant/potted_lavender",
+      "y": 270
+    }
+  }
+}

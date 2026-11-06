@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:stove",
+  "pattern": [
+    "IDI",
+    "ISI",
+    "I I"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "S": "minecraft:smoker",
+    "D": "minecraft:yellow_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_stove"
+  },
+  "show_notification": false
+}

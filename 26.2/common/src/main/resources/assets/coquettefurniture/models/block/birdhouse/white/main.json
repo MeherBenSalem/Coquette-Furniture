@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/birdhouse/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/white/bow",
+    "paint": "coquettefurniture:block/white/paint",
+    "trim": "coquettefurniture:block/white/trim",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

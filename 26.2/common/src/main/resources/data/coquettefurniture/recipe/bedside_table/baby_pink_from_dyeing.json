@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:bedside_table",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_pink_bedside_table"
+  },
+  "group": "coquettefurniture:dye_bedside_table"
+}

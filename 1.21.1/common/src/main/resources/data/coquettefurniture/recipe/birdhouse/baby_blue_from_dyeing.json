@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:birdhouse"
+    },
+    {
+      "item": "minecraft:light_blue_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_birdhouse"
+  },
+  "group": "coquettefurniture:dye_birdhouse"
+}

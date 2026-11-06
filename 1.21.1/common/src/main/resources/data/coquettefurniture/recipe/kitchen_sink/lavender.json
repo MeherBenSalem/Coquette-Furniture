@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:kitchen_sink",
+  "pattern": [
+    "QBQ",
+    "PDP",
+    "PPP"
+  ],
+  "key": {
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "D": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_kitchen_sink"
+  },
+  "show_notification": false
+}

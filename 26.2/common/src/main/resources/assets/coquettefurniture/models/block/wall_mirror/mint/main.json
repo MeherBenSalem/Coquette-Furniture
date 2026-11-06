@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/wall_mirror/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/mint/bow",
+    "paint": "coquettefurniture:block/mint/paint",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

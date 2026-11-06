@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:vanity_table"
+    },
+    {
+      "item": "minecraft:lime_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_vanity_table"
+  },
+  "group": "coquettefurniture:dye_vanity_table"
+}

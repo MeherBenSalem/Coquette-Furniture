@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:vanity_table",
+  "pattern": [
+    " M ",
+    "PDP",
+    "S S"
+  ],
+  "key": {
+    "M": "minecraft:glass_pane",
+    "P": "#minecraft:planks",
+    "S": "minecraft:stick",
+    "D": "minecraft:light_blue_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_vanity_table"
+  },
+  "show_notification": false
+}

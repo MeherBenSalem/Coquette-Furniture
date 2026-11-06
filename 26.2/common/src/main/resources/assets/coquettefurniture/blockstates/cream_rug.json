@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "coquettefurniture:block/rug/cream/center"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/rug/cream/edge"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/rug/cream/edge",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/rug/cream/edge",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/rug/cream/edge",
+        "y": 270
+      }
+    }
+  ]
+}

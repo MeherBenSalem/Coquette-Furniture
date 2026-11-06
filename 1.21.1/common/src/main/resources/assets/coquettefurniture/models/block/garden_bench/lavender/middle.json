@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/garden_bench/middle",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/lavender/paint",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

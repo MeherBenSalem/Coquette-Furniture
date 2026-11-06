@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "coquettefurniture:block/picnic_blanket/mint/center"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/picnic_blanket/mint/edge"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/picnic_blanket/mint/edge",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/picnic_blanket/mint/edge",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "coquettefurniture:block/picnic_blanket/mint/edge",
+        "y": 270
+      }
+    }
+  ]
+}

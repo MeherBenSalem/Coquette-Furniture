@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/curtains/lower_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_blue/bow",
+    "print": "coquettefurniture:block/baby_blue/print",
+    "particle": "coquettefurniture:block/baby_blue/fabric"
+  }
+}

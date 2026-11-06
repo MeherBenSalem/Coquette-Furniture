@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:dining_table",
+  "pattern": [
+    "PPP",
+    "SDS",
+    "S S"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "minecraft:light_blue_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_dining_table"
+  },
+  "show_notification": false
+}

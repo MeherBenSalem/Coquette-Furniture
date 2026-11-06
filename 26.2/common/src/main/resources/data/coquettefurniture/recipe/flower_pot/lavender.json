@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:flower_pot",
+  "pattern": [
+    "fff",
+    "KDK",
+    " K "
+  ],
+  "key": {
+    "f": "#minecraft:small_flowers",
+    "K": "minecraft:clay_ball",
+    "D": "minecraft:purple_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_flower_pot"
+  },
+  "show_notification": false
+}

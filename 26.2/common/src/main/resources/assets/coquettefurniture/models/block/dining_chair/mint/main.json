@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/dining_chair/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/mint/bow",
+    "fabric": "coquettefurniture:block/mint/fabric",
+    "paint": "coquettefurniture:block/mint/paint",
+    "quilt": "coquettefurniture:block/mint/quilt",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

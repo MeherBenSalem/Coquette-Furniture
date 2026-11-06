@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "J",
+    "J",
+    "F"
+  ],
+  "key": {
+    "J": {
+      "item": "minecraft:jungle_leaves"
+    },
+    "F": {
+      "item": "minecraft:flower_pot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:potted_monstera"
+  },
+  "show_notification": false
+}

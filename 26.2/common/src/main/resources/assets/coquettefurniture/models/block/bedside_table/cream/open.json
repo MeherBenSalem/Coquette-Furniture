@@ -1,0 +1,12 @@
+{
+  "parent": "coquettefurniture:block/template/bedside_table/open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/cream/bow",
+    "lining": "coquettefurniture:block/cream/lining",
+    "paint": "coquettefurniture:block/cream/paint",
+    "panel": "coquettefurniture:block/cream/panel",
+    "trim": "coquettefurniture:block/cream/trim",
+    "particle": "coquettefurniture:block/cream/paint"
+  }
+}

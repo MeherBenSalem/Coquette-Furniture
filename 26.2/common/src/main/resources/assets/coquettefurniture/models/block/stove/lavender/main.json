@@ -1,0 +1,9 @@
+{
+  "parent": "coquettefurniture:block/template/stove/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "ceramic": "coquettefurniture:block/lavender/ceramic",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/ceramic"
+  }
+}

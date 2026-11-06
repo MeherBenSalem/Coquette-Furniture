@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:jewelry_box"
+    },
+    {
+      "item": "minecraft:light_blue_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_jewelry_box"
+  },
+  "group": "coquettefurniture:dye_jewelry_box"
+}

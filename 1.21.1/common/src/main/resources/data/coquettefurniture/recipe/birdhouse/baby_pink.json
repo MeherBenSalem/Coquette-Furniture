@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:birdhouse",
+  "pattern": [
+    " P ",
+    "PDP",
+    " S "
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "minecraft:pink_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_pink_birdhouse"
+  },
+  "show_notification": false
+}

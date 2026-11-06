@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:wall_mirror",
+    "minecraft:yellow_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_wall_mirror"
+  },
+  "group": "coquettefurniture:dye_wall_mirror"
+}

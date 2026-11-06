@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,lit=false": {
+      "model": "coquettefurniture:block/stove/white/main"
+    },
+    "facing=north,lit=true": {
+      "model": "coquettefurniture:block/stove/white/main_lit"
+    },
+    "facing=east,lit=false": {
+      "model": "coquettefurniture:block/stove/white/main",
+      "y": 90
+    },
+    "facing=east,lit=true": {
+      "model": "coquettefurniture:block/stove/white/main_lit",
+      "y": 90
+    },
+    "facing=south,lit=false": {
+      "model": "coquettefurniture:block/stove/white/main",
+      "y": 180
+    },
+    "facing=south,lit=true": {
+      "model": "coquettefurniture:block/stove/white/main_lit",
+      "y": 180
+    },
+    "facing=west,lit=false": {
+      "model": "coquettefurniture:block/stove/white/main",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "coquettefurniture:block/stove/white/main_lit",
+      "y": 270
+    }
+  }
+}

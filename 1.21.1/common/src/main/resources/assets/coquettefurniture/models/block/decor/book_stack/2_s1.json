@@ -1,0 +1,388 @@
+{
+  "ambientocclusion": false,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "book_blue": "coquettefurniture:block/baby_blue/trim",
+    "book_pink": "coquettefurniture:block/baby_pink/trim",
+    "bow": "coquettefurniture:block/white/bow",
+    "gold": "coquettefurniture:block/gold",
+    "pages": "coquettefurniture:block/pages",
+    "particle": "coquettefurniture:block/baby_blue/trim"
+  },
+  "elements": [
+    {
+      "from": [
+        3.75,
+        -2,
+        5
+      ],
+      "to": [
+        12.25,
+        -0.5,
+        11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3.75,
+            0.5,
+            12.25,
+            2
+          ],
+          "texture": "#pages"
+        },
+        "south": {
+          "uv": [
+            3.75,
+            0.5,
+            12.25,
+            2
+          ],
+          "texture": "#pages"
+        },
+        "east": {
+          "uv": [
+            5,
+            0.5,
+            11,
+            2
+          ],
+          "texture": "#pages"
+        },
+        "west": {
+          "uv": [
+            5,
+            0.5,
+            11,
+            2
+          ],
+          "texture": "#book_pink"
+        },
+        "up": {
+          "uv": [
+            3.75,
+            5,
+            12.25,
+            11
+          ],
+          "texture": "#book_pink"
+        },
+        "down": {
+          "uv": [
+            3.75,
+            5,
+            12.25,
+            11
+          ],
+          "texture": "#book_pink"
+        }
+      }
+    },
+    {
+      "from": [
+        3.7,
+        -1.5,
+        5
+      ],
+      "to": [
+        3.75,
+        -1,
+        11
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            5,
+            1,
+            11,
+            1.5
+          ],
+          "texture": "#gold"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        -1.75,
+        10.95
+      ],
+      "to": [
+        7.5,
+        -0.75,
+        11.3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.5,
+            0.75,
+            9,
+            1.75
+          ],
+          "texture": "#bow"
+        },
+        "south": {
+          "uv": [
+            7,
+            0.75,
+            7.5,
+            1.75
+          ],
+          "texture": "#bow"
+        },
+        "east": {
+          "uv": [
+            4.7,
+            0.75,
+            5.05,
+            1.75
+          ],
+          "texture": "#bow"
+        },
+        "west": {
+          "uv": [
+            10.95,
+            0.75,
+            11.3,
+            1.75
+          ],
+          "texture": "#bow"
+        },
+        "up": {
+          "uv": [
+            7,
+            10.95,
+            7.5,
+            11.3
+          ],
+          "texture": "#bow"
+        },
+        "down": {
+          "uv": [
+            7,
+            4.7,
+            7.5,
+            5.05
+          ],
+          "texture": "#bow"
+        }
+      }
+    },
+    {
+      "from": [
+        4.25,
+        -0.5,
+        5.25
+      ],
+      "to": [
+        11.75,
+        0.75,
+        10.75
+      ],
+      "rotation": {
+        "angle": 22.5,
+        "axis": "y",
+        "origin": [
+          8,
+          0,
+          8
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            4.25,
+            14.75,
+            11.75,
+            16
+          ],
+          "texture": "#pages"
+        },
+        "south": {
+          "uv": [
+            4.25,
+            14.75,
+            11.75,
+            16
+          ],
+          "texture": "#pages"
+        },
+        "east": {
+          "uv": [
+            5.25,
+            14.75,
+            10.75,
+            16
+          ],
+          "texture": "#book_blue"
+        },
+        "west": {
+          "uv": [
+            5.25,
+            14.75,
+            10.75,
+            16
+          ],
+          "texture": "#pages"
+        },
+        "up": {
+          "uv": [
+            4.25,
+            5.25,
+            11.75,
+            10.75
+          ],
+          "texture": "#book_blue"
+        },
+        "down": {
+          "uv": [
+            4.25,
+            5.25,
+            11.75,
+            10.75
+          ],
+          "texture": "#book_blue"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        5.96,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.525,
+        0.525,
+        0.525
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.525,
+        0.525,
+        0.525
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ]
+    }
+  }
+}

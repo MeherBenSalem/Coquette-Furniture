@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/jewelry_box/open_s0",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "lining": "coquettefurniture:block/white/lining",
+    "paint": "coquettefurniture:block/white/paint",
+    "quilt": "coquettefurniture:block/white/quilt",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

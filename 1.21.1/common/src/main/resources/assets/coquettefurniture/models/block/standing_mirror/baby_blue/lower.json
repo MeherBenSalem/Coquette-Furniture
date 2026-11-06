@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/standing_mirror/lower",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/baby_blue/paint",
+    "particle": "coquettefurniture:block/baby_blue/paint"
+  }
+}

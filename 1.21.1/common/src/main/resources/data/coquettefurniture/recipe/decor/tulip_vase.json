@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "T",
+    "G"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:pink_tulip"
+    },
+    "G": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:tulip_vase"
+  },
+  "show_notification": false
+}

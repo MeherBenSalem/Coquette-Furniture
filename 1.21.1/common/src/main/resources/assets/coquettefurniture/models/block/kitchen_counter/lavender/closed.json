@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/kitchen_counter/closed",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/lavender/paint",
+    "panel": "coquettefurniture:block/lavender/panel",
+    "trim": "coquettefurniture:block/lavender/trim",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

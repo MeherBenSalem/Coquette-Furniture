@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/armchair/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_blue/bow",
+    "fabric": "coquettefurniture:block/baby_blue/fabric",
+    "quilt": "coquettefurniture:block/baby_blue/quilt",
+    "trim": "coquettefurniture:block/baby_blue/trim",
+    "particle": "coquettefurniture:block/baby_blue/fabric"
+  }
+}

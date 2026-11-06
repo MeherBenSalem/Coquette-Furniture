@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:picnic_blanket"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_picnic_blanket"
+  },
+  "group": "coquettefurniture:dye_picnic_blanket"
+}

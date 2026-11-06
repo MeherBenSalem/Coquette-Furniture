@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " g ",
+    "PNP"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:gold_nugget"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "N": {
+      "item": "minecraft:note_block"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:heart_music_box"
+  },
+  "show_notification": false
+}

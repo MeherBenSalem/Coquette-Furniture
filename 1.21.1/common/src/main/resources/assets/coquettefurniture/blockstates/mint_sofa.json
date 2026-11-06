@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,shape=single": {
+      "model": "coquettefurniture:block/sofa/mint/single"
+    },
+    "facing=north,shape=left": {
+      "model": "coquettefurniture:block/sofa/mint/left"
+    },
+    "facing=north,shape=middle": {
+      "model": "coquettefurniture:block/sofa/mint/middle"
+    },
+    "facing=north,shape=right": {
+      "model": "coquettefurniture:block/sofa/mint/right"
+    },
+    "facing=east,shape=single": {
+      "model": "coquettefurniture:block/sofa/mint/single",
+      "y": 90
+    },
+    "facing=east,shape=left": {
+      "model": "coquettefurniture:block/sofa/mint/left",
+      "y": 90
+    },
+    "facing=east,shape=middle": {
+      "model": "coquettefurniture:block/sofa/mint/middle",
+      "y": 90
+    },
+    "facing=east,shape=right": {
+      "model": "coquettefurniture:block/sofa/mint/right",
+      "y": 90
+    },
+    "facing=south,shape=single": {
+      "model": "coquettefurniture:block/sofa/mint/single",
+      "y": 180
+    },
+    "facing=south,shape=left": {
+      "model": "coquettefurniture:block/sofa/mint/left",
+      "y": 180
+    },
+    "facing=south,shape=middle": {
+      "model": "coquettefurniture:block/sofa/mint/middle",
+      "y": 180
+    },
+    "facing=south,shape=right": {
+      "model": "coquettefurniture:block/sofa/mint/right",
+      "y": 180
+    },
+    "facing=west,shape=single": {
+      "model": "coquettefurniture:block/sofa/mint/single",
+      "y": 270
+    },
+    "facing=west,shape=left": {
+      "model": "coquettefurniture:block/sofa/mint/left",
+      "y": 270
+    },
+    "facing=west,shape=middle": {
+      "model": "coquettefurniture:block/sofa/mint/middle",
+      "y": 270
+    },
+    "facing=west,shape=right": {
+      "model": "coquettefurniture:block/sofa/mint/right",
+      "y": 270
+    }
+  }
+}

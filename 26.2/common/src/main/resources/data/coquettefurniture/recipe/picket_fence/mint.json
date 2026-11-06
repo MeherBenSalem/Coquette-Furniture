@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:picket_fence",
+  "pattern": [
+    "SDS",
+    "SPS"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "P": "#minecraft:planks",
+    "D": "minecraft:lime_dye"
+  },
+  "result": {
+    "count": 3,
+    "id": "coquettefurniture:mint_picket_fence"
+  },
+  "show_notification": false
+}

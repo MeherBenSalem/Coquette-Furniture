@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:soap_dispenser"
+    },
+    {
+      "item": "minecraft:light_blue_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_blue_soap_dispenser"
+  },
+  "group": "coquettefurniture:dye_soap_dispenser"
+}

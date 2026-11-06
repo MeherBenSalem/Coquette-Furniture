@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/sofa/single",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "fabric": "coquettefurniture:block/mint/fabric",
+    "print": "coquettefurniture:block/mint/print",
+    "quilt": "coquettefurniture:block/mint/quilt",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/fabric"
+  }
+}

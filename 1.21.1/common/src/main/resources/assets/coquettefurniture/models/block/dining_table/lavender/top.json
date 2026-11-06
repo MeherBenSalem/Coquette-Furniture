@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/dining_table/top",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/lavender/paint",
+    "particle": "coquettefurniture:block/lavender/paint"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,shape=single": {
+      "model": "coquettefurniture:block/garden_bench/lavender/single"
+    },
+    "facing=north,shape=left": {
+      "model": "coquettefurniture:block/garden_bench/lavender/left"
+    },
+    "facing=north,shape=middle": {
+      "model": "coquettefurniture:block/garden_bench/lavender/middle"
+    },
+    "facing=north,shape=right": {
+      "model": "coquettefurniture:block/garden_bench/lavender/right"
+    },
+    "facing=east,shape=single": {
+      "model": "coquettefurniture:block/garden_bench/lavender/single",
+      "y": 90
+    },
+    "facing=east,shape=left": {
+      "model": "coquettefurniture:block/garden_bench/lavender/left",
+      "y": 90
+    },
+    "facing=east,shape=middle": {
+      "model": "coquettefurniture:block/garden_bench/lavender/middle",
+      "y": 90
+    },
+    "facing=east,shape=right": {
+      "model": "coquettefurniture:block/garden_bench/lavender/right",
+      "y": 90
+    },
+    "facing=south,shape=single": {
+      "model": "coquettefurniture:block/garden_bench/lavender/single",
+      "y": 180
+    },
+    "facing=south,shape=left": {
+      "model": "coquettefurniture:block/garden_bench/lavender/left",
+      "y": 180
+    },
+    "facing=south,shape=middle": {
+      "model": "coquettefurniture:block/garden_bench/lavender/middle",
+      "y": 180
+    },
+    "facing=south,shape=right": {
+      "model": "coquettefurniture:block/garden_bench/lavender/right",
+      "y": 180
+    },
+    "facing=west,shape=single": {
+      "model": "coquettefurniture:block/garden_bench/lavender/single",
+      "y": 270
+    },
+    "facing=west,shape=left": {
+      "model": "coquettefurniture:block/garden_bench/lavender/left",
+      "y": 270
+    },
+    "facing=west,shape=middle": {
+      "model": "coquettefurniture:block/garden_bench/lavender/middle",
+      "y": 270
+    },
+    "facing=west,shape=right": {
+      "model": "coquettefurniture:block/garden_bench/lavender/right",
+      "y": 270
+    }
+  }
+}

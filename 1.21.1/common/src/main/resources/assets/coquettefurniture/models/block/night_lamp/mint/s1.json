@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/night_lamp/s1",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/mint/bow",
+    "ceramic": "coquettefurniture:block/mint/ceramic",
+    "shade": "coquettefurniture:block/mint/shade",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/shade"
+  }
+}

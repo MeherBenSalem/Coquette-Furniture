@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,part=head": {
+      "model": "coquettefurniture:block/canopy_bed/white/head"
+    },
+    "facing=north,part=foot": {
+      "model": "coquettefurniture:block/canopy_bed/white/foot"
+    },
+    "facing=east,part=head": {
+      "model": "coquettefurniture:block/canopy_bed/white/head",
+      "y": 90
+    },
+    "facing=east,part=foot": {
+      "model": "coquettefurniture:block/canopy_bed/white/foot",
+      "y": 90
+    },
+    "facing=south,part=head": {
+      "model": "coquettefurniture:block/canopy_bed/white/head",
+      "y": 180
+    },
+    "facing=south,part=foot": {
+      "model": "coquettefurniture:block/canopy_bed/white/foot",
+      "y": 180
+    },
+    "facing=west,part=head": {
+      "model": "coquettefurniture:block/canopy_bed/white/head",
+      "y": 270
+    },
+    "facing=west,part=foot": {
+      "model": "coquettefurniture:block/canopy_bed/white/foot",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "variants": {
+    "facing=north,sink=0": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s0"
+    },
+    "facing=north,sink=1": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s1"
+    },
+    "facing=north,sink=2": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s2"
+    },
+    "facing=north,sink=3": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s3"
+    },
+    "facing=north,sink=4": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s4"
+    },
+    "facing=east,sink=0": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s0",
+      "y": 90
+    },
+    "facing=east,sink=1": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s1",
+      "y": 90
+    },
+    "facing=east,sink=2": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s2",
+      "y": 90
+    },
+    "facing=east,sink=3": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s3",
+      "y": 90
+    },
+    "facing=east,sink=4": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s4",
+      "y": 90
+    },
+    "facing=south,sink=0": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s0",
+      "y": 180
+    },
+    "facing=south,sink=1": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s1",
+      "y": 180
+    },
+    "facing=south,sink=2": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s2",
+      "y": 180
+    },
+    "facing=south,sink=3": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s3",
+      "y": 180
+    },
+    "facing=south,sink=4": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s4",
+      "y": 180
+    },
+    "facing=west,sink=0": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s0",
+      "y": 270
+    },
+    "facing=west,sink=1": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s1",
+      "y": 270
+    },
+    "facing=west,sink=2": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s2",
+      "y": 270
+    },
+    "facing=west,sink=3": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s3",
+      "y": 270
+    },
+    "facing=west,sink=4": {
+      "model": "coquettefurniture:block/tea_set/baby_pink/s4",
+      "y": 270
+    }
+  }
+}

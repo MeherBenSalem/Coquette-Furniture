@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coquettefurniture:mint_wardrobe",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coquettefurniture:mint_wardrobe",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "coquettefurniture:blocks/mint_wardrobe"
+}

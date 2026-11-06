@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:rug",
+  "pattern": [
+    "CDC"
+  ],
+  "key": {
+    "C": "#minecraft:wool_carpets",
+    "D": "minecraft:lime_dye"
+  },
+  "result": {
+    "count": 2,
+    "id": "coquettefurniture:mint_rug"
+  },
+  "show_notification": false
+}

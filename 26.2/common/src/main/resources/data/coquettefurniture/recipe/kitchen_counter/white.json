@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:kitchen_counter",
+  "pattern": [
+    "QQQ",
+    "PDP",
+    "PPP"
+  ],
+  "key": {
+    "Q": "minecraft:quartz",
+    "P": "#minecraft:planks",
+    "D": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_kitchen_counter"
+  },
+  "show_notification": false
+}

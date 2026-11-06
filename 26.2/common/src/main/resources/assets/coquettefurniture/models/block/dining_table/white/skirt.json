@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/dining_table/skirt",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/white/paint",
+    "particle": "coquettefurniture:block/white/paint"
+  }
+}

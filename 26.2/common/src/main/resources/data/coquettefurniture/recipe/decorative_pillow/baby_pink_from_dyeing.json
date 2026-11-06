@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#coquettefurniture:decorative_pillow",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_pink_decorative_pillow"
+  },
+  "group": "coquettefurniture:dye_decorative_pillow"
+}

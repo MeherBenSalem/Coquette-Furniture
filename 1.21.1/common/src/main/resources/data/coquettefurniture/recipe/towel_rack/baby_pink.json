@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:towel_rack",
+  "pattern": [
+    "iDi",
+    "WWW"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_nugget"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "D": {
+      "item": "minecraft:pink_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:baby_pink_towel_rack"
+  },
+  "show_notification": false
+}

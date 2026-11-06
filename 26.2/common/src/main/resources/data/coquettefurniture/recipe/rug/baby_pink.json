@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:rug",
+  "pattern": [
+    "CDC"
+  ],
+  "key": {
+    "C": "#minecraft:wool_carpets",
+    "D": "minecraft:pink_dye"
+  },
+  "result": {
+    "count": 2,
+    "id": "coquettefurniture:baby_pink_rug"
+  },
+  "show_notification": false
+}

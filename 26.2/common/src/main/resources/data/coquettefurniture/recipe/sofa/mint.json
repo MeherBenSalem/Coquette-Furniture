@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:sofa",
+  "pattern": [
+    "WDW",
+    "WWW",
+    "P P"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "P": "#minecraft:planks",
+    "D": "minecraft:lime_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_sofa"
+  },
+  "show_notification": false
+}

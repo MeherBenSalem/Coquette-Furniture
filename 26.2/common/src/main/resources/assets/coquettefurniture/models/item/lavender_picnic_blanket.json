@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/picnic_blanket/item",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "gingham": "coquettefurniture:block/lavender/gingham",
+    "particle": "coquettefurniture:block/lavender/gingham"
+  }
+}

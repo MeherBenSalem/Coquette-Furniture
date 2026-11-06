@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "CCC",
+    " g "
+  ],
+  "key": {
+    "C": "minecraft:candle",
+    "g": "minecraft:gold_nugget"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:pastel_candles"
+  },
+  "show_notification": false
+}

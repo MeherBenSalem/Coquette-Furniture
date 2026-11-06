@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:kitchen_sink"
+    },
+    {
+      "item": "minecraft:yellow_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:cream_kitchen_sink"
+  },
+  "group": "coquettefurniture:dye_kitchen_sink"
+}

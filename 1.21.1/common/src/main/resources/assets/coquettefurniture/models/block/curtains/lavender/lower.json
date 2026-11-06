@@ -1,0 +1,8 @@
+{
+  "parent": "coquettefurniture:block/template/curtains/lower",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "print": "coquettefurniture:block/lavender/print",
+    "particle": "coquettefurniture:block/lavender/fabric"
+  }
+}

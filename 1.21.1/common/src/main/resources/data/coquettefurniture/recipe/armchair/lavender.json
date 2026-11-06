@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:armchair",
+  "pattern": [
+    "W W",
+    "WDW",
+    "P P"
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "D": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_armchair"
+  },
+  "show_notification": false
+}

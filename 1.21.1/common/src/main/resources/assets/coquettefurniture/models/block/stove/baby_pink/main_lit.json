@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/stove/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "burner": "coquettefurniture:block/burner_lit",
+    "ceramic": "coquettefurniture:block/baby_pink/ceramic",
+    "oven": "coquettefurniture:block/oven_lit",
+    "trim": "coquettefurniture:block/baby_pink/trim",
+    "particle": "coquettefurniture:block/baby_pink/ceramic"
+  }
+}

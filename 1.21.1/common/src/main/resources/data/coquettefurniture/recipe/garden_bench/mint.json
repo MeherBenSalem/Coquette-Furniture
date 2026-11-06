@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:garden_bench",
+  "pattern": [
+    "S S",
+    "PDP",
+    "S S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "D": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_garden_bench"
+  },
+  "show_notification": false
+}

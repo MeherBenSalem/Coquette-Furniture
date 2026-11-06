@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/jewelry_box/closed_s3",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/cream/bow",
+    "paint": "coquettefurniture:block/cream/paint",
+    "quilt": "coquettefurniture:block/cream/quilt",
+    "particle": "coquettefurniture:block/cream/paint"
+  }
+}

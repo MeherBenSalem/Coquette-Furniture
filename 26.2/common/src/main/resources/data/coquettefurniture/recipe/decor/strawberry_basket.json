@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " S ",
+    "BBB",
+    "HHH"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "B": "minecraft:sweet_berries",
+    "H": "minecraft:wheat"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:strawberry_basket"
+  },
+  "show_notification": false
+}

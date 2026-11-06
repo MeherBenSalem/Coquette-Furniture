@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:tea_set",
+  "pattern": [
+    "KDK",
+    "gKg"
+  ],
+  "key": {
+    "K": "minecraft:clay_ball",
+    "g": "minecraft:gold_nugget",
+    "D": "minecraft:purple_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_tea_set"
+  },
+  "show_notification": false
+}

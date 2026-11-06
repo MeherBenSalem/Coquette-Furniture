@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "coquettefurniture:kitchen_counter"
+    },
+    {
+      "item": "minecraft:lime_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_kitchen_counter"
+  },
+  "group": "coquettefurniture:dye_kitchen_counter"
+}

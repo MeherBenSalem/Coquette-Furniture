@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:bookshelf",
+  "pattern": [
+    "PDP",
+    "BBB",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "D": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_bookshelf"
+  },
+  "show_notification": false
+}

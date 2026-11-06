@@ -1,0 +1,10 @@
+{
+  "parent": "coquettefurniture:block/template/bathroom_cabinet/closed",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "paint": "coquettefurniture:block/mint/paint",
+    "panel": "coquettefurniture:block/mint/panel",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

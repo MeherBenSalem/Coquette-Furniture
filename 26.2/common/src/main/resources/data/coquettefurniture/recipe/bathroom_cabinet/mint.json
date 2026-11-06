@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:bathroom_cabinet",
+  "pattern": [
+    "PDP",
+    "PMP",
+    "PCP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "M": "minecraft:glass_pane",
+    "C": "minecraft:chest",
+    "D": "minecraft:lime_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_bathroom_cabinet"
+  },
+  "show_notification": false
+}

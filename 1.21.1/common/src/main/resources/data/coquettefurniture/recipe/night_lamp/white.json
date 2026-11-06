@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:night_lamp",
+  "pattern": [
+    " W ",
+    "DTD",
+    " g "
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    },
+    "g": {
+      "item": "minecraft:gold_nugget"
+    },
+    "D": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_night_lamp"
+  },
+  "show_notification": false
+}

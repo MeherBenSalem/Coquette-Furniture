@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SDS",
+    "PPP"
+  ],
+  "key": {
+    "S": "minecraft:string",
+    "D": "minecraft:pink_dye",
+    "P": "minecraft:paper"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:ribbon_gift_box"
+  },
+  "show_notification": false
+}

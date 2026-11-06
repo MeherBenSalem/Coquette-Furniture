@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:outdoor_table",
+  "pattern": [
+    "PPP",
+    "iDi",
+    " i "
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "i": {
+      "item": "minecraft:iron_nugget"
+    },
+    "D": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_outdoor_table"
+  },
+  "show_notification": false
+}

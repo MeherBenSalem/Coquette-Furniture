@@ -1,0 +1,14 @@
+{
+  "parent": "coquettefurniture:block/template/canopy_bed/head",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/baby_pink/bow",
+    "fabric": "coquettefurniture:block/baby_pink/fabric",
+    "paint": "coquettefurniture:block/baby_pink/paint",
+    "print": "coquettefurniture:block/baby_pink/print",
+    "quilt": "coquettefurniture:block/baby_pink/quilt",
+    "sheer": "coquettefurniture:block/baby_pink/sheer",
+    "trim": "coquettefurniture:block/baby_pink/trim",
+    "particle": "coquettefurniture:block/baby_pink/paint"
+  }
+}

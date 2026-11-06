@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:display_cabinet",
+  "pattern": [
+    "PDP",
+    "M M",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "M": {
+      "item": "minecraft:glass_pane"
+    },
+    "D": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_display_cabinet"
+  },
+  "show_notification": false
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:wall_mirror",
+  "pattern": [
+    " D ",
+    "PMP",
+    " P "
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "M": "minecraft:glass_pane",
+    "D": "minecraft:lime_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:mint_wall_mirror"
+  },
+  "show_notification": false
+}

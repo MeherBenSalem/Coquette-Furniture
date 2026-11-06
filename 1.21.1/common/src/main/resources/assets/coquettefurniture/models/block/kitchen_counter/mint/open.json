@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/kitchen_counter/open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "lining": "coquettefurniture:block/mint/lining",
+    "paint": "coquettefurniture:block/mint/paint",
+    "panel": "coquettefurniture:block/mint/panel",
+    "trim": "coquettefurniture:block/mint/trim",
+    "particle": "coquettefurniture:block/mint/paint"
+  }
+}

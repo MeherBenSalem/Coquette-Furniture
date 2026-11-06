@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:stove",
+  "pattern": [
+    "IDI",
+    "ISI",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:smoker"
+    },
+    "D": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:lavender_stove"
+  },
+  "show_notification": false
+}

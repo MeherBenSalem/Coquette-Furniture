@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coquettefurniture:block/armchair/cream/main"
+    },
+    "facing=east": {
+      "model": "coquettefurniture:block/armchair/cream/main",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "coquettefurniture:block/armchair/cream/main",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coquettefurniture:block/armchair/cream/main",
+      "y": 270
+    }
+  }
+}
