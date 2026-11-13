@@ -1,0 +1,31 @@
+name: Upload missing jars to CurseForge
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "List what would be uploaded without uploading"
+        type: boolean
+        default: false
+  push:
+    paths:
+      - ".github/workflows/curseforge-upload.yml"
+      - "tools/curseforge_upload.py"
+      - "release/**"
+
+concurrency:
+  group: curseforge-upload
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Upload jars that are not on CurseForge yet
+        env:
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+        run: python3 tools/curseforge_upload.py ${{ inputs.dry_run && '--dry-run' || '' }}
