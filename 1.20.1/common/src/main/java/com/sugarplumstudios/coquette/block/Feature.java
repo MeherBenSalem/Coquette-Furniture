@@ -26,7 +26,8 @@ public enum Feature {
     STACK,
     DYE,
     BIRDS,
-    CANDLES;
+    CANDLES,
+    FLUSH;
 
     private final String key = "tooltip.coquettefurniture.feature." + name().toLowerCase(Locale.ROOT);
 

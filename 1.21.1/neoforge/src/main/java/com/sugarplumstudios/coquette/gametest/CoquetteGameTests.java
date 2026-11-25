@@ -8,6 +8,7 @@ import com.sugarplumstudios.coquette.block.ConnectingBlock;
 import com.sugarplumstudios.coquette.block.DecorBlock;
 import com.sugarplumstudios.coquette.block.DecorSurface;
 import com.sugarplumstudios.coquette.block.DecorType;
+import com.sugarplumstudios.coquette.block.Feature;
 import com.sugarplumstudios.coquette.block.FurnitureBlock;
 import com.sugarplumstudios.coquette.block.FurnitureColor;
 import com.sugarplumstudios.coquette.block.FurnitureType;
@@ -138,6 +139,25 @@ public final class CoquetteGameTests {
         double seatTop = helper.absolutePos(pos).getY() + 10.5D / 16.0D;
         helper.assertTrue(Math.abs(player.getVehicle().getY() - seatTop) < 0.01D, "Seat should be at cushion height");
         player.stopRiding();
+        helper.succeed();
+    }
+
+    @GameTest(template = TEMPLATE)
+    public static void toiletSeatsAndFlushes(GameTestHelper helper) {
+        BlockPos pos = new BlockPos(2, 1, 2);
+        helper.setBlock(pos, ModBlocks.furniture(FurnitureType.TOILET, FurnitureColor.LAVENDER).defaultBlockState());
+        Player player = playerNear(helper, pos);
+        use(helper, pos, player);
+        helper.assertTrue(player.getVehicle() instanceof SeatEntity, "Player should be sitting on the toilet");
+        double seatTop = helper.absolutePos(pos).getY() + 8.75D / 16.0D;
+        helper.assertTrue(Math.abs(player.getVehicle().getY() - seatTop) < 0.01D, "Seat should be at seat-ring height");
+        player.stopRiding();
+        player.setShiftKeyDown(true);
+        InteractionResult flushed = use(helper, pos, player);
+        helper.assertTrue(flushed.consumesAction(), "Sneak + right-click should flush");
+        helper.assertTrue(player.getVehicle() == null, "Flushing should not seat the player");
+        helper.assertTrue(FurnitureType.TOILET.features().contains(Feature.FLUSH), "Toilet should list the flush feature");
+        player.setShiftKeyDown(false);
         helper.succeed();
     }
 

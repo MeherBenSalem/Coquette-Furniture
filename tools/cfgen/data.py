@@ -188,6 +188,8 @@ def build_types():
                    tool=None, recipe=recipe(P("iDi", "WWW"), {"i": I("iron_nugget"), "W": WOOL})))
     T.append(FType("soap_dispenser", "Soap Dispenser", "bathroom", "sink", sinks(F.soap_dispenser), "s0",
                    particle="ceramic", tool=None, recipe=recipe(P(" i ", "KDK", " K "), {"i": I("iron_nugget"), "K": I("clay_ball")})))
+    T.append(FType("toilet", "Toilet", "bathroom", "simple", {"main": F.toilet()}, "main", particle="ceramic",
+                   tool="pickaxe", recipe=recipe(P("QBQ", "QDQ", " Q "), {"Q": I("quartz"), "B": I("bucket")})))
     # ---------------------------------------------------------------- garden
     T.append(FType("garden_bench", "Garden Bench", "garden", "connect", {s: F.garden_bench(s) for s in SHAPES4}, "single",
                    recipe=recipe(P("S S", "PDP", "S S"), {"S": I("stick"), "P": PLANKS})))
@@ -634,6 +636,7 @@ EXTRA_LANG = {
     "tooltip.coquettefurniture.feature.dye": "Right-click with a dye to recolour",
     "tooltip.coquettefurniture.feature.birds": "Birds come to visit",
     "tooltip.coquettefurniture.feature.candles": "Light with flint and steel",
+    "tooltip.coquettefurniture.feature.flush": "Sneak + right-click to flush",
     "gui.coquettefurniture.catalog.title": "Interior Design Catalog",
     "gui.coquettefurniture.catalog.search": "Search furniture…",
     "gui.coquettefurniture.catalog.items": "%s pieces",
@@ -661,6 +664,7 @@ EXTRA_LANG = {
     "message.coquettefurniture.soap": "Squeaky clean! ♡",
     "message.coquettefurniture.seat_occupied": "Someone is already sitting there",
     "message.coquettefurniture.bath_relax": "Ahh… a relaxing bubble bath",
+    "message.coquettefurniture.flush": "Whoosh! Sparkling clean ♡",
     "message.coquettefurniture.catalog_given": "Delivered %s ♡",
     "message.coquettefurniture.catalog_creative_only": "Catalog delivery only works in creative mode",
 }

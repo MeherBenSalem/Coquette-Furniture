@@ -1,0 +1,172 @@
+# CI for Coquette Furniture (NightBeam convention; copied from Modern-Building-Wands, based on Bosses' publisher-checks.yml).
+# Builds all 8 jars (1.20.1 Fabric + Forge; 1.21.1, 26.2, 26.3 Fabric + NeoForge) with ./gradlew buildAll,
+# runs each workspace's unit tests (part of `build`), checks that every workspace has the same version= and
+# that the metadata ranges stay inside their Minecraft line, and runs the publisher script tests (the same-day
+# guard, and the jar-name detection the upload step uses, which used to be validate-publish-meta.yml).
+# It also runs the GameTests (1.20.1 Forge, 1.21.1 NeoForge) and starts a real server for each of the 8 jars
+# with tools/prodtest.sh. It never publishes anything.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "1.20.1/**"
+      - "1.21.1/**"
+      - "26.2/**"
+      - "26.3/**"
+      - "scripts/**"
+      - "build.gradle"
+      - "settings.gradle"
+      - "gradle.properties"
+      - "gradle/**"
+      - "gradlew"
+      - "gradlew.bat"
+      # Bundled into every jar by the workspaces' multiloader-common.gradle.
+      - "LICENSE"
+      - "NOTICE"
+      - "releases/**"
+      - "tools/prodtest.sh"
+      - ".github/scripts/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Check publisher syntax
+        run: |
+          for f in scripts/*.mjs .github/scripts/*.js; do node --check "$f"; done
+      - name: Test publisher scripts (same-day guard)
+        run: node --test scripts/*.test.mjs
+      # Jar name -> loader + Minecraft version, as the upload step reads it (calendar versions such as 26.2 must
+      # never fall back to 1.21.1).
+      - name: Test jar metadata detection
+        run: node .github/scripts/detect-jar-meta.test.js
+      - name: Spot-check releases/ jar names
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          jars=(releases/*.jar)
+          if [ ${#jars[@]} -eq 0 ]; then
+            echo 'No releases/*.jar, skipping'
+            exit 0
+          fi
+          for jar in "${jars[@]}"; do
+            echo -n "$jar -> "
+            node .github/scripts/detect-jar-meta.js "$jar"
+          done
+      - name: Check the 8 targets, one version and metadata ranges
+        run: python3 scripts/check_targets.py workspaces
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # 21 stays JAVA_HOME (Gradle for 1.20.1/1.21.1); 17 is the 1.20.1 toolchain; the root build hands 26.x
+      # JAVA_HOME_25_X64.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: |
+            17
+            25
+            21
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build all 8 jars and run the unit tests
+        run: |
+          chmod +x gradlew 1.20.1/gradlew 1.21.1/gradlew 26.2/gradlew 26.3/gradlew
+          ./gradlew buildAll --no-daemon
+      - name: Check the 8 jars
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(python3 scripts/check_targets.py version)"
+          python3 scripts/check_targets.py jars --version "$version" --dir releases --list-file ci-jars.txt
+          mkdir -p ci-jars
+          xargs -a ci-jars.txt cp -f -t ci-jars/
+          # The upload step must be able to read loader + Minecraft version from every built jar name.
+          while IFS= read -r jar; do node .github/scripts/detect-jar-meta.js "$jar"; done < ci-jars.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coquettefurniture-jars
+          path: ci-jars/*.jar
+          if-no-files-found: error
+
+  gametests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - workspace: "1.20.1"
+            task: ":forge:runGameTestServer"
+          - workspace: "1.21.1"
+            task: ":neoforge:runGameTestServer"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: |
+            17
+            21
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Run the GameTests (${{ matrix.workspace }})
+        working-directory: ${{ matrix.workspace }}
+        run: |
+          chmod +x gradlew
+          ./gradlew ${{ matrix.task }} --no-daemon -Porg.gradle.java.installations.fromEnv=JAVA_HOME_17_X64,JAVA_HOME_21_X64
+
+  server-smoke:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { mc: "1.20.1", loader: forge, java: "17" }
+          - { mc: "1.20.1", loader: fabric, java: "17" }
+          - { mc: "1.21.1", loader: neoforge, java: "21" }
+          - { mc: "1.21.1", loader: fabric, java: "21" }
+          - { mc: "26.2", loader: neoforge, java: "25" }
+          - { mc: "26.2", loader: fabric, java: "25" }
+          - { mc: "26.3", loader: neoforge, java: "25" }
+          - { mc: "26.3", loader: fabric, java: "25" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: coquettefurniture-jars
+          path: ci-jars
+      - name: Start a real ${{ matrix.loader }} ${{ matrix.mc }} server with the jar
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p "${{ matrix.mc }}/${{ matrix.loader }}/build/libs"
+          cp ci-jars/coquettefurniture-${{ matrix.loader }}-${{ matrix.mc }}-*.jar "${{ matrix.mc }}/${{ matrix.loader }}/build/libs/"
+          chmod +x tools/prodtest.sh
+          tools/prodtest.sh "${{ matrix.mc }}" "${{ matrix.loader }}" | tee smoke.txt
+          if grep -qE 'SERVER DID NOT START|MOD DID NOT INITIALISE|no mod jar' smoke.txt; then
+            echo "::error::The ${{ matrix.loader }} ${{ matrix.mc }} server did not load Coquette Furniture"; exit 1
+          fi
+          if sed -n '/^---- problems/,/^---- end/p' smoke.txt | grep -E 'coquette|Coquette|Exception'; then
+            echo "::error::Errors mentioning the mod or an exception in the ${{ matrix.loader }} ${{ matrix.mc }} server log"; exit 1
+          fi

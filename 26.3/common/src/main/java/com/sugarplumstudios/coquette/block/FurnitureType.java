@@ -79,6 +79,8 @@ public enum FurnitureType {
             DecorSurface.NOT_A_SURFACE)),
     SOAP_DISPENSER(Room.BATHROOM, 0, c -> new SoapDispenserBlock(decor(c, SoundType.GLASS),
             px(6, 0, 4.75, 10, 8.5, 10, 10.25, 0, 9.75, 13.5, 1.25, 12.25)), Feature.DECOR),
+    TOILET(Room.BATHROOM, 0, c -> new ToiletBlock(ceramic(c).strength(2.0F), px(3, 0, 0.75, 13, 8.75, 12.5,
+            2, 7.5, 12.25, 14, 16, 16), 8.75, 7), Feature.SEAT, Feature.FLUSH),
     // ------------------------------------------------------------------ garden
     GARDEN_BENCH(Room.GARDEN, 0, c -> new ConnectedSeatBlock(wood(c), px(0, 0, 2.75, 16, 7.5, 12.25, 0, 0, 12.5, 16, 16, 14.5),
             7.5, 7, 4), Feature.SEAT, Feature.CONNECTS),

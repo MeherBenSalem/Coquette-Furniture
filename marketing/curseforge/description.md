@@ -4,7 +4,7 @@
 
 ## Dream bedrooms and pastel home decor.
 
-**Coquette Furniture** fills your builds with **37 pieces of furniture in six pastel colourways**, **4 potted plants** and **13 decorations**: 239 blocks in all. Each one is a detailed model with cabriole legs, gold knobs, satin bows, lace trims, tufted cushions and hearts.
+**Coquette Furniture** fills your builds with **38 pieces of furniture in six pastel colourways**, **4 potted plants** and **13 decorations**: 245 blocks in all. Each one is a detailed model with cabriole legs, gold knobs, satin bows, lace trims, tufted cushions and hearts.
 
 Most of them do something too. **Sit** on sofas and swings, **sleep** in a canopy bed, **store** things in wardrobes and fridges, **cook** on the stove, run a **bubble bath**, fill buckets at the sink, light candles, play a music box or get pampered at the vanity. Browse it all in the **Interior Design Catalog**, and repaint any placed piece with a dye.
 
@@ -73,6 +73,7 @@ Every piece below comes in all six colours: **Baby Pink, White, Cream, Lavender,
 | **Bathroom Cabinet** | Wall-mounted, 9 slots; the mirrored door swings open on perfume bottles |
 | **Towel Rack** | A wall-mounted towel with a lace hem and an embroidered heart |
 | **Soap Dispenser** | Bubbles and squeaky clean hands (it also puts out fire) |
+| **Toilet** | A porcelain toilet with a gold flush lever and a fluffy lid cover with a bow. Sit on it, or **sneak + right-click** with an empty hand to flush |
 
 ![Garden](https://raw.githubusercontent.com/MeherBenSalem/Coquette-Furniture/main/marketing/images/header-garden.png)
 
@@ -118,7 +119,7 @@ Every player gets an **Interior Design Catalog** on their first join. Right-clic
 | --- | --- | --- |
 | **Princess Bedroom** | 17 | Baby pink canopy bed, vanity and wardrobe, finished with gold and pearls |
 | **Strawberry Cottage** | 17 | Cream and pink cottage kitchen and garden with gingham picnics and berry baskets |
-| **Lavender Dreams** | 16 | A sleepy lilac bedroom and bath scented with potted lavender |
+| **Lavender Dreams** | 17 | A sleepy lilac bedroom and bath scented with potted lavender |
 | **Angelcore Room** | 16 | Cloud white and sky blue, with angels, candles and soft lace |
 | **Pastel Kitchen** | 13 | A rainbow of pastel appliances: mint fridge, baby blue stove, cream counters |
 
@@ -172,6 +173,7 @@ Every furniture recipe uses vanilla materials plus the colour's dye, and **every
 | Bathroom Cabinet | Planks, a glass pane and a chest |
 | Towel Rack | Iron nuggets and wool |
 | Soap Dispenser | An iron nugget and clay balls |
+| Toilet | Quartz and a bucket |
 | Garden Bench | Sticks and planks |
 | Flower Pot | Small flowers and clay balls |
 | Birdhouse | Planks and a stick |
@@ -199,7 +201,7 @@ The files and keys are the same on every loader and Minecraft version.
 
 ![Everything Else](https://raw.githubusercontent.com/MeherBenSalem/Coquette-Furniture/main/marketing/images/header-everything.png)
 
-- **239 blocks** in two creative tabs, **Coquette Furniture** and **Coquette Décor**.
+- **245 blocks** in two creative tabs, **Coquette Furniture** and **Coquette Décor**.
 - Every piece is **waterloggable**, breaks into one item (two-block pieces drop once), and storage spills its contents when broken.
 - Item tooltips list what each piece does and which sets it belongs to.
 - Two-block pieces need the second space free: beds and bathtubs extend away from you, tall pieces upward.

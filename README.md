@@ -2,9 +2,9 @@
 
 *A Sugarplum Studios mod for Minecraft Java 1.20.1, 1.21.1, 26.2 and 26.3, on Forge, Fabric and NeoForge*
 
-Dream bedrooms and pastel home decor. **37 pieces of furniture in six colourways**
+Dream bedrooms and pastel home decor. **38 pieces of furniture in six colourways**
 (Baby Pink, White, Cream, Lavender, Mint, Baby Blue), **4 potted plants** and
-**13 decorations**: 239 blocks in all. Each one is a detailed model with
+**13 decorations**: 245 blocks in all. Each one is a detailed model with
 cabriole legs, gold knobs, satin bows, lace trims, tufted cushions and hearts.
 Most of them do something too: you can sit, sleep, store, cook, bathe, wash
 up, light candles, play music or get pampered.
@@ -20,8 +20,8 @@ up, light candles, play music or get pampered.
 | 26.2 | NeoForge, Fabric | 25+ | Fabric API on Fabric |
 | 26.3 | NeoForge, Fabric | 25+ | Fabric API on Fabric |
 
-Put the jar for your loader and version (`coquettefurniture-<loader>-<minecraft>-1.0.0.jar`) in your `mods` folder, on the
-server and on every client. The release jars are in `release/1.0.0/`.
+Put the jar for your loader and version (`coquettefurniture-<loader>-<minecraft>-1.1.0.jar`) in your `mods` folder, on the
+server and on every client. The 1.0.0 jars are in `release/1.0.0/`; newer ones are on CurseForge.
 
 ---
 
@@ -74,6 +74,7 @@ Every piece below comes in all six colours. ✦ = has a block entity.
 | Bathroom Cabinet ✦ | Wall-mounted, 9 slots; the mirrored door swings open on perfume bottles. |
 | Towel Rack | Wall-mounted towel with a lace hem and embroidered heart. |
 | Soap Dispenser | Right-click for bubbles and squeaky clean hands (also puts out fire). |
+| Toilet | Porcelain toilet with a gold flush lever and a fluffy lid cover with a bow. Sit on it; sneak + right-click with an empty hand to flush. |
 
 ### Garden
 | Piece | What it does |
@@ -194,6 +195,7 @@ Each step lists what you should see.
 3. **Wall Mirror**, **Bathroom Cabinet** and **Towel Rack**: click the side of a wall to hang them.
    → They sit flat against the wall. Open the cabinet: the mirrored door swings open.
 4. **Soap Dispenser** on a counter. Right-click. → Bubbles and "Squeaky clean!".
+5. **Toilet**: right-click to sit. Sneak + right-click with an empty hand. → Flush sound, splash and "Whoosh! Sparkling clean ♡".
 
 ### 6. Garden
 1. **Picket Fence**: place a line; attach a lead. → Connects like a fence, holds the lead, joins oak fences.
@@ -209,7 +211,7 @@ Each step lists what you should see.
 4. Place furniture under water. → It's waterlogged.
 
 ### 8. Automated checks
-`cd 1.20.1 && ./gradlew :forge:runGameTestServer`: 14 tests covering recipes and loot for all 239 blocks, sitting, sofa/table/rug
+`cd 1.20.1 && ./gradlew :forge:runGameTestServer`: 15 tests covering recipes and loot for all 245 blocks, sitting, the toilet flush, sofa/table/rug
 joining, decoration sinking, pillows, sinks, bathtubs, recolouring with contents, storage sizes and open
 models, beds, stove cooking, lamps/candles/curtains and the display cabinet.
 

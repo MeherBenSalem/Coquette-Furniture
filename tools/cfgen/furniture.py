@@ -927,6 +927,43 @@ def soap_dispenser():
     return e
 
 
+def toilet():
+    """Pastel pedestal toilet: bowl at the front, tank against the wall, a fluffy lid cover with a bow."""
+    e = []
+    # pedestal foot and column with a gold band
+    e += rbox(4.5, 0, 3.5, 11.5, 1, 12, "ceramic", r=0.5)
+    e += B(5.5, 1, 4.5, 10.5, 4, 11, "ceramic")
+    e += B(5.25, 2.25, 4.25, 10.75, 2.75, 11.25, "gold", u=None, d=None)
+    # bowl: ceramic outside, porcelain inside, water in the bottom
+    e += B(4.5, 4, 1, 11.5, 8, 2.5, "ceramic", s="porcelain")
+    e += B(3.5, 4, 1.75, 4.5, 8, 2.5, "ceramic", e="porcelain") + B(11.5, 4, 1.75, 12.5, 8, 2.5, "ceramic", w="porcelain")
+    e += B(3, 4, 2.5, 4.5, 8, 11, "ceramic", e="porcelain")
+    e += B(11.5, 4, 2.5, 13, 8, 11, "ceramic", w="porcelain")
+    e += B(4.5, 4, 10, 11.5, 8, 11.5, "ceramic", n="porcelain")
+    e += B(4.5, 4, 2.5, 11.5, 5, 10, "porcelain")
+    e += B(5, 6.25, 3.25, 11, 6.35, 9.5, "water", n=None, s=None, e=None, w=None, d=None)
+    # seat ring, porcelain with gold hinges
+    e += B(4.25, 8, 0.75, 11.75, 8.75, 2.5, "porcelain")
+    e += B(3.25, 8, 1.5, 4.75, 8.75, 2.5, "porcelain") + B(11.25, 8, 1.5, 12.75, 8.75, 2.5, "porcelain")
+    e += B(2.75, 8, 2.5, 4.75, 8.75, 10.75, "porcelain") + B(11.25, 8, 2.5, 13.25, 8.75, 10.75, "porcelain")
+    e += B(4.75, 8, 9.75, 11.25, 8.75, 11.75, "porcelain")
+    e += B(4.5, 8.5, 11.25, 5.75, 9.25, 12.25, "gold") + B(10.25, 8.5, 11.25, 11.5, 9.25, 12.25, "gold")
+    # neck between bowl and tank
+    e += B(5, 4, 11.5, 11, 8, 12.75, "ceramic")
+    # tank with a porcelain lid and a gold flush lever
+    e += rbox(2.5, 7.5, 12.75, 13.5, 15, 15.75, "ceramic", r=0.75)
+    e += B(2, 15, 12.5, 14, 16, 16, "porcelain")
+    e += B(2.25, 14.75, 12.25, 13.75, 15, 16, "gold", u=None, d=None)
+    e += B(1.75, 12.25, 13.5, 2.5, 13.25, 14.5, "gold")
+    e += B(1.25, 12.5, 12.25, 1.75, 13, 14.5, "gold")
+    # raised lid in a fluffy cover, lace hem, bow and gold heart
+    e += rbox(3.5, 9, 12, 12.5, 14.5, 12.75, "fabric", r=0.35, n="quilt")
+    e += B(3.4, 8.75, 11.9, 12.6, 9.75, 12, LACE_HEM, s=None, u=None, d=None, e=None, w=None)
+    e += bow(8, 13.25, 11.55, 12, 0.7)
+    e += heart(8, 10.25, 11.85, 12, 0.3, "gold")
+    return e
+
+
 # =========================================================================== garden
 
 def garden_bench(shape):

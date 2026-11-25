@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coquettefurniture:toilet",
+  "pattern": [
+    "QBQ",
+    "QDQ",
+    " Q "
+  ],
+  "key": {
+    "Q": "minecraft:quartz",
+    "B": "minecraft:bucket",
+    "D": "minecraft:white_dye"
+  },
+  "result": {
+    "count": 1,
+    "id": "coquettefurniture:white_toilet"
+  },
+  "show_notification": false
+}

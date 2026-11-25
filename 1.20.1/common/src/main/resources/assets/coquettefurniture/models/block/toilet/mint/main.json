@@ -1,0 +1,11 @@
+{
+  "parent": "coquettefurniture:block/template/toilet/main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bow": "coquettefurniture:block/mint/bow",
+    "ceramic": "coquettefurniture:block/mint/ceramic",
+    "fabric": "coquettefurniture:block/mint/fabric",
+    "quilt": "coquettefurniture:block/mint/quilt",
+    "particle": "coquettefurniture:block/mint/ceramic"
+  }
+}

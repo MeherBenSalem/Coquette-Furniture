@@ -178,6 +178,12 @@ cream_soap_dispenser
 lavender_soap_dispenser
 mint_soap_dispenser
 baby_blue_soap_dispenser
+baby_pink_toilet
+white_toilet
+cream_toilet
+lavender_toilet
+mint_toilet
+baby_blue_toilet
 baby_pink_garden_bench
 white_garden_bench
 cream_garden_bench
