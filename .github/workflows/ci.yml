@@ -167,6 +167,7 @@ jobs:
           if grep -qE 'SERVER DID NOT START|MOD DID NOT INITIALISE|no mod jar' smoke.txt; then
             echo "::error::The ${{ matrix.loader }} ${{ matrix.mc }} server did not load Coquette Furniture"; exit 1
           fi
-          if sed -n '/^---- problems/,/^---- end/p' smoke.txt | grep -E 'coquette|Coquette|Exception'; then
+          # The server runs in /tmp/coquette-prodtest, so drop that path before looking for the mod's name.
+          if sed -n '/^---- problems/,/^---- end/p' smoke.txt | sed 's#/tmp/coquette-prodtest[^ ]*##g' | grep -E 'coquettefurniture|Coquette|Exception|/ERROR\]'; then
             echo "::error::Errors mentioning the mod or an exception in the ${{ matrix.loader }} ${{ matrix.mc }} server log"; exit 1
           fi
